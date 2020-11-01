@@ -8,7 +8,7 @@
 * 改变缺省端口，找到`Port 22`改为其他端口
 ## 在客户端设置
 * 使用ssh-keygen生成
-默认保存于ssh目录中,id_rsa 为私钥，id_rsa.pub 为公钥。。
+默认保存于.ssh目录中,id_rsa 为私钥，id_rsa.pub 为公钥。。
 ```
 ssh-keygen
 Generating public/private rsa key pair.
