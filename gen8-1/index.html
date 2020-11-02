@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>HP Gen8之基础配置 - 我的自留地</title><meta name="Description" content="我的自留地"><meta property="og:title" content="HP Gen8之基础配置" />
-<meta property="og:description" content="HP gen8时微型4盘位的服务器，比较适合做NAS。自己也海淘了一台，升级了CPU和内存，安装了Proxmox虚拟机，虚拟机内安装了windo" />
+        <title>HP Gen8设置 - 我的自留地</title><meta name="Description" content="我的自留地"><meta property="og:title" content="HP Gen8设置" />
+<meta property="og:description" content="HP gen8时微型4盘位的服务器，比较适合做NAS。自己也海淘了一台，升级了CPU(1265v2)和内存(16M)，安装了Proxmox虚拟机" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/gen8-1/" />
 <meta property="og:image" content="https://flyleon.github.io/logo.png"/>
@@ -15,21 +15,21 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
 
-<meta name="twitter:title" content="HP Gen8之基础配置"/>
-<meta name="twitter:description" content="HP gen8时微型4盘位的服务器，比较适合做NAS。自己也海淘了一台，升级了CPU和内存，安装了Proxmox虚拟机，虚拟机内安装了windo"/>
+<meta name="twitter:title" content="HP Gen8设置"/>
+<meta name="twitter:description" content="HP gen8时微型4盘位的服务器，比较适合做NAS。自己也海淘了一台，升级了CPU(1265v2)和内存(16M)，安装了Proxmox虚拟机"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://flyleon.github.io/gen8-1/" /><link rel="prev" href="https://flyleon.github.io/proxmox/" /><link rel="next" href="https://flyleon.github.io/soft/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://flyleon.github.io/gen8-1/" /><link rel="prev" href="https://flyleon.github.io/wayland/" /><link rel="next" href="https://flyleon.github.io/soft/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "HP Gen8之基础配置",
+        "headline": "HP Gen8设置",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/gen8-1\/"
-        },"genre": "posts","keywords": "vps, gen8","wordcount":  927 ,
+        },"genre": "posts","keywords": "vps, gen8","wordcount":  1408 ,
         "url": "https:\/\/flyleon.github.io\/gen8-1\/","datePublished": "2020-11-01T10:30:22+08:00","dateModified": "2020-11-01T10:30:22+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,10 +118,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">HP Gen8之基础配置</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">HP Gen8设置</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 927 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1408 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -137,10 +137,13 @@
     </li>
     <li><a href="#升级bios">升级BIOS</a></li>
     <li><a href="#使用spp升级系统">使用SPP升级系统</a></li>
+    <li><a href="#proxmox">proxmox</a></li>
+    <li><a href="#synology">synology</a></li>
+    <li><a href="#软路由">软路由</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p>HP gen8时微型4盘位的服务器，比较适合做NAS。自己也海淘了一台，升级了CPU和内存，安装了Proxmox虚拟机，虚拟机内安装了windows server 2019,synology,centos 7,还是很稳定的。</p>
+<p>HP gen8时微型4盘位的服务器，比较适合做NAS。自己也海淘了一台，升级了CPU(1265v2)和内存(16M)，安装了Proxmox虚拟机，虚拟机内安装了windows server 2019,synology,centos 7,还是很稳定的。</p>
 </blockquote>
 <h2 id="ilo静态ip地址设置">ilo静态ip地址设置</h2>
 <p>ilo是gen8的特色，方便服务器远程管理，无需连接显示器核键盘。使用自动获取ip，每次连接很不方便，可以为设置静态地址方便连接。目前我安装的ilo版本是2.75，支持使用html5远程控制管理，比较方便。</p>
@@ -235,6 +238,22 @@ ipmitool mc reset cold
 <li>重新启动按F1选择CD-ROM启动。</li>
 <li>选择第一项自动安装，否则升级可能会出现问题。</li>
 </ul>
+<h2 id="proxmox">proxmox</h2>
+<p>proxmox 是一款免费虚拟机软件，基于debian，使用qemu，lxc虚拟化。提供专门的管理页面（端口8006）来建立管理虚拟机，支持集群，功能强大，我仅使用了它最基础的功能。
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">安装很简单，使用ilo远程服务台挂载安装ISO，选择CDROM启动即可。proxmox占用空间很小，可直接安装到gen8内置的SD或USB盘上，可以省去一个硬盘接口。
+选择网卡时，一定要选择好，否则启动后无法连接控制台，解决也很简单，交换网线口即可。</div>
+        </div>
+    </div></p>
+<h2 id="synology">synology</h2>
+<p>群辉是比较常用的NAS它的软件是基于linux开发，功能强大，使用模块化管理，拓展性强，稳定性高。我安装了一个它的破解后的虚拟机，主要用作NAS和照片管理。
+最新资源在<a href="https://xpenology.com/forum/" target="_blank" rel="noopener noreffer">xpenology</a>上可以找到。</p>
+<h2 id="软路由">软路由</h2>
+<p>常见的pc软路由软件有openwart，ros，voxy，其中lede是基于openwrt整合了较多功能，我们一般使用lead即可。ros是收费商业软件，稳定性和性能据说不错，不过无法拓展功能。voxy也是开源软件，但也无法拓展。lede编译比较复杂，依赖很多，我们可以使用现成的<a href="https://github.com/jandelgado/lede-dockerbuilder" target="_blank" rel="noopener noreffer">docker</a>来编译，方便很多。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -248,7 +267,7 @@ ipmitool mc reset cold
                             <a class="link-to-markdown" href="/gen8-1/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8之基础配置" data-via="xxxx" data-hashtags="vps,gen8"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://flyleon.github.io/gen8-1/" data-hashtag="vps"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8之基础配置" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8之基础配置"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8之基础配置"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8之基础配置" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8之基础配置" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8之基础配置"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8设置" data-via="xxxx" data-hashtags="vps,gen8"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://flyleon.github.io/gen8-1/" data-hashtag="vps"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8设置" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8设置"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8设置"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8设置" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8设置" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://flyleon.github.io/gen8-1/" data-title="HP Gen8设置"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -260,7 +279,7 @@ ipmitool mc reset cold
         </section>
     </div>
 
-    <div class="post-nav"><a href="/proxmox/" class="prev" rel="prev" title="HP gen8安装配置Proxmox"><i class="fas fa-angle-left fa-fw"></i>HP gen8安装配置Proxmox</a>
+    <div class="post-nav"><a href="/wayland/" class="prev" rel="prev" title="Archlinux使用Wayland和sway"><i class="fas fa-angle-left fa-fw"></i>Archlinux使用Wayland和sway</a>
             <a href="/soft/" class="next" rel="next" title="我使用的主要软件">我使用的主要软件<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
