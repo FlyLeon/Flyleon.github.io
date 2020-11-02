@@ -124,7 +124,7 @@ WantedBy=multi-user.target
 
 /etc/systemd/system/frps.service
 ```
-Unit]
+[Unit]
 Description=Frp Server Service
 After=network.target
 
@@ -140,21 +140,6 @@ WantedBy=multi-user.target
 ```
 /etc/frps/frps.ini
 ```
-[Unit]
-Description=The filebrowser Process Manager
-After=network.target
-
-[Service]
-Type=simple
-ExecStart=/usr/local/bin/filebrowser -c /etc/filebrowser/filebrowser.json
-ExecStop=/bin/killall filebrowser
-PrivateTmp=true
-
-[Install]
-WantedBy=multi-user.target
-
-~                                                                                     
-[Unit]
 # [common] is integral section
 [common]
 # A literal address or host name for IPv6 must be enclosed

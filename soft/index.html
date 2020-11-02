@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/soft\/"
-        },"genre": "posts","keywords": "software","wordcount":  2206 ,
+        },"genre": "posts","keywords": "software","wordcount":  2173 ,
         "url": "https:\/\/flyleon.github.io\/soft\/","datePublished": "2020-11-01T14:49:57+08:00","dateModified": "2020-11-01T14:49:57+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">我使用的主要软件</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2206 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2173 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -392,7 +392,7 @@ WantedBy=multi-user.target
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Unit]
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Unit]
 Description=Frp Server Service
 After=network.target
 
@@ -523,39 +523,9 @@ WantedBy=multi-user.target
 </span><span class="lnt">111
 </span><span class="lnt">112
 </span><span class="lnt">113
-</span><span class="lnt">114
-</span><span class="lnt">115
-</span><span class="lnt">116
-</span><span class="lnt">117
-</span><span class="lnt">118
-</span><span class="lnt">119
-</span><span class="lnt">120
-</span><span class="lnt">121
-</span><span class="lnt">122
-</span><span class="lnt">123
-</span><span class="lnt">124
-</span><span class="lnt">125
-</span><span class="lnt">126
-</span><span class="lnt">127
-</span><span class="lnt">128
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Unit]
-Description=The filebrowser Process Manager
-After=network.target
-
-[Service]
-Type=simple
-ExecStart=/usr/local/bin/filebrowser -c /etc/filebrowser/filebrowser.json
-ExecStop=/bin/killall filebrowser
-PrivateTmp=true
-
-[Install]
-WantedBy=multi-user.target
-
-~                                                                                     
-[Unit]
-# [common] is integral section
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># [common] is integral section
 [common]
 # A literal address or host name for IPv6 must be enclosed
 # in square brackets, as in &#34;[::1]:80&#34;, &#34;[ipv6-host]:http&#34; or &#34;[ipv6-host%zone]:80&#34;
