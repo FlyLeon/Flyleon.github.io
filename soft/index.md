@@ -78,7 +78,7 @@ set background=dark
 highlight Normal guibg=NONE ctermbg=None
 ```
 ## **软件
-v2raya是一款使用网页方便设置的**软件，支持全局代理，支持常用**协议。
+v2raya是一款使用网页方便设置的\**软件，支持全局代理，支持常用\**协议。
 ## 配色
 可以为fish，kitty，neovim均安装使用流行的dracula配色，这方面搜索dracula网站即可，说明很详细。
 {{< admonition tip >}}
