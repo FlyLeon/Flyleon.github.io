@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/arch-1\/"
-        },"genre": "posts","keywords": "archlinux","wordcount":  917 ,
+        },"genre": "posts","keywords": "archlinux","wordcount":  908 ,
         "url": "https:\/\/flyleon.github.io\/arch-1\/","datePublished": "2020-10-22T10:17:33+08:00","dateModified": "2020-10-22T10:17:33+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Archlinux 优化之一</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-22">2020-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 917 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-22">2020-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 908 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -267,7 +267,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 </div><ul>
 <li>清理缓存</li>
 </ul>
-<p>慎用<code>sudo pacman -Scc</code>暴力清理，可以安装pacman-contrib包使用paccache清理。paccache清理缺省保留最近3次的升级的软件包，方便今后降级，而且通过参数可以控制清理内容。如<code>paccache -d</code>可以先查看删除内容,<code>paccache -r</code>删除缓冲包，`pacchche -rk1&rsquo;删除最近一次升级外缓存包等等。</p>
+<p>慎用<code>sudo pacman -Scc</code>暴力清理，可以安装pacman-contrib包使用paccache清理。paccache清理缺省保留最近3次的升级的软件包，方便今后降级，而且通过参数可以控制清理内容。如<code>paccache -d</code>可以先查看删除内容,<code>paccache -r</code>删除缓冲包，<code>pacchche -rk</code>删除最近一次升级外缓存包等等。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
