@@ -1,4 +1,4 @@
-# Archlinux使用Wayland和sway
+# 使用Wayland和sway
 
 >根据维基百科，Wayland是一个通信协议，规定了显示服务器与其客户机之间的通信方式，而使用这个协议的显示服务器称为Wayland Compositor。是不是很不好理解，我们只需知道它可以代替xorg就可以了。sway是wayland上的Title Compositor，类似于xorg下的i3，设置基本相同，使用快捷键来操作。以下设置主要参考[archlinux wiki](https://wiki.archlinux.org/index.php/wayland)。
 
@@ -162,7 +162,18 @@ find /usr/share/icons/ -name 'input-keyboard.*'
 bar设置主题：
 ```
 icon_theme Adwaita
-
 ```
 
+# 登录管理器
+登录管理器我选择greetd+tuigreet，非常小巧灵活的终端登陆器。
+* 安装
+```
+yay - S greetd greetd-tuigreet
+```
+* 设置
+/etc/greetd/config.timl
+```
+[default_session]
+command = "tuigreet --cmd sway"
+```
 

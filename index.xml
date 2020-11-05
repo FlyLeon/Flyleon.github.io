@@ -20,7 +20,7 @@
     <guid>https://flyleon.github.io/gen8-1/</guid>
     <description><![CDATA[HP gen8时微型4盘位的服务器，比较适合做NAS。自己也海淘了一台，升级了CPU(1265v2)和内存(16M)，安装了Proxmox虚拟机]]></description>
 </item><item>
-    <title>Archlinux使用Wayland和sway</title>
+    <title>使用Wayland和sway</title>
     <link>https://flyleon.github.io/wayland/</link>
     <pubDate>Thu, 29 Oct 2020 12:33:02 &#43;0800</pubDate>
     <author>作者</author>
