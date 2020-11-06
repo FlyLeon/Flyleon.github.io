@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/wayland\/"
-        },"genre": "posts","keywords": "arch, wayland","wordcount":  1011 ,
+        },"genre": "posts","keywords": "arch, wayland","wordcount":  1013 ,
         "url": "https:\/\/flyleon.github.io\/wayland\/","datePublished": "2020-10-29T12:33:02+08:00","dateModified": "2020-10-29T12:33:02+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">使用Wayland和sway</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1011 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1013 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -180,7 +180,7 @@ GDK_DPI_SCALE=1.65                   //hidpi 设置
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">set $term  kitty
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">set $term urxvtc 
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -203,7 +203,7 @@ wayland使用bemenu快速启动程序</li>
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">exec &#34;kitty -e nohup redshift 2&gt;&amp;1
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">exec &#34;urxvtc -e nohup redshift 2&gt;&amp;1
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -314,8 +314,6 @@ client.urgent     $ubgcolor  $ubgcolor  $textcolor $ubgcolor
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback"> bar {
@@ -323,11 +321,9 @@ client.urgent     $ubgcolor  $ubgcolor  $textcolor $ubgcolor
      font xft:Font Awesome 5 16 
      # When the status_command prints a new line to stdout, swaybar updates.
      # The default just shows the current date and time.
- #    status_command waybar  -c ~/.config/waybar/config
- #     status_command while ~/.config/sway/sway_bar.sh; do sleep 1; done
  #      status_command while date +&#39;%Y-%m-%d %l:%M:%S %p&#39;; do sleep 1; done
  
-      status_command i3status -c ~/.config/i3status/i3status.conf
+      status_command i3status 
       colors {
                   background $barcolor
                   separator $barcolor  
@@ -388,12 +384,10 @@ smart_gaps on
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">bindsym $mod+x exec google-chrome-stable
 for_window [instance=google-chrome]  move container to workspace number 2
-for_window  [instance=google-chrome] 
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -438,7 +432,7 @@ mode &#34;$mode_system&#34; {
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>设置边框大小</li>
+<li>设置边框取消标题栏</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -450,7 +444,7 @@ mode &#34;$mode_system&#34; {
 </div>
 </div><ul>
 <li>设置键盘
-参照<a href="https://github.com/pfaion/x1carbon-xkb-geometry" target="_blank" rel="noopener noreffer">github</a>设置</li>
+参照<a href="https://github.com/pfaion/x1carbon-xkb-geometry" target="_blank" rel="noopener noreffer">github</a>设置thinkpad X1键盘。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -473,7 +467,7 @@ input &lt;identifier&gt; xkb_model &#34;x1carbon&#34;
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>全屏取消锁屏</li>
+<li>chrome全屏取消锁屏</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
