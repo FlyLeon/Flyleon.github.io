@@ -129,35 +129,30 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#ilo静态ip地址设置">ilo静态ip地址设置</a>
       <ul>
-        <li><a href="#ilo静态ip地址设置">ilo静态ip地址设置</a></li>
-        <li><a href="#升级bios">升级BIOS</a></li>
-        <li><a href="#使用spp升级系统">使用SPP升级系统</a></li>
-        <li><a href="#proxmox">proxmox</a></li>
-        <li><a href="#synology">synology</a></li>
-        <li><a href="#软路由">软路由</a></li>
+        <li><a href="#启动设置">启动设置</a></li>
+        <li><a href="#linux内设置">linux内设置</a></li>
       </ul>
     </li>
+    <li><a href="#升级bios">升级BIOS</a></li>
+    <li><a href="#使用spp升级系统">使用SPP升级系统</a></li>
+    <li><a href="#proxmox">proxmox</a></li>
+    <li><a href="#synology">synology</a></li>
+    <li><a href="#软路由">软路由</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
 <p>HP gen8是微型4盘位的服务器，比较适合做NAS。自己也海淘了一台，升级了CPU(1265v2)和内存(16M)，安装了Proxmox虚拟机，虚拟机内安装了windows server 2019,synology,centos 7,还是很稳定的。</p>
 </blockquote>
-<h3 id="ilo静态ip地址设置">ilo静态ip地址设置</h3>
+<h2 id="ilo静态ip地址设置">ilo静态ip地址设置</h2>
 <p>ilo是gen8的特色，方便服务器远程管理，无需连接显示器核键盘。使用自动获取ip，每次连接很不方便，可以为设置静态地址方便连接。目前我安装的ilo版本是2.75，支持使用html5远程控制管理，比较方便。</p>
-<ul>
-<li>
-<p>启动设置
-常规可以在启动时按F9进入ilo设置界面内设置。</p>
-</li>
-<li>
-<p>linux内设置
-如你的机器上已安装linux，也可用过ipmitool设置。ipmi是ibm发起的一个服务器设置协议，可以通过命令界面进行服务器的一些原需在BIOS中进行的一些设置。</p>
+<h3 id="启动设置">启动设置</h3>
+<p>常规可以在启动时按F9进入ilo设置界面内设置。</p>
+<h3 id="linux内设置">linux内设置</h3>
+<p>如你的机器上已安装linux，也可用过ipmitool设置。ipmi是ibm发起的一个服务器设置协议，可以通过命令界面进行服务器的一些原需在BIOS中进行的一些设置。</p>
 <ul>
 <li>首先查找网卡位置</li>
-</ul>
-</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -225,10 +220,10 @@ ipmitool lan set 2 defgw ipaddr 192.168.50.1
 ipmitool mc reset cold
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="升级bios">升级BIOS</h3>
+</div><h2 id="升级bios">升级BIOS</h2>
 <p>HP gen8的很多设着都可以在ilo下操作，升级BIOS也可以在ilo固件下进行，直接上传BIOS镜像即可，我使用的是2019年4月4日的。当然也可以制作usb来升级，不过没有ilo方便。另外gen8为了安全期间，有两个BIOS，一个备份，一个使用，正常升级只升级备份，没有问题的话，需要我们在BIOS手动交换来永久使用。
 具体操作可上网搜索。</p>
-<h3 id="使用spp升级系统">使用SPP升级系统</h3>
+<h2 id="使用spp升级系统">使用SPP升级系统</h2>
 <p>HP gen8可定期通过SPP升级系统，不过HP网站过质保期后就无法下载，我们可以搜索热心网友分享的下载。</p>
 <div class="details admonition tip open">
         <div class="details-summary admonition-title">
@@ -243,7 +238,7 @@ ipmitool mc reset cold
 <li>重新启动按F1选择CD-ROM启动。</li>
 <li>选择第一项自动安装，否则升级可能会出现问题。</li>
 </ul>
-<h3 id="proxmox">proxmox</h3>
+<h2 id="proxmox">proxmox</h2>
 <p>proxmox 是一款免费虚拟机软件，基于debian，使用qemu，lxc虚拟化。提供专门的管理页面（端口8006）来建立管理虚拟机，支持集群，功能强大，我仅使用了它最基础的功能。
 <div class="details admonition tip open">
         <div class="details-summary admonition-title">
@@ -254,10 +249,10 @@ ipmitool mc reset cold
 选择网卡时，一定要选择好，否则启动后无法连接控制台，解决也很简单，交换网线口即可。</div>
         </div>
     </div></p>
-<h3 id="synology">synology</h3>
+<h2 id="synology">synology</h2>
 <p>群辉是比较常用的NAS它的软件是基于linux开发，功能强大，使用模块化管理，拓展性强，稳定性高。我安装了一个它的破解后的虚拟机，主要用作NAS和照片管理。
 最新资源在<a href="https://xpenology.com/forum/" target="_blank" rel="noopener noreffer">xpenology</a>上可以找到。</p>
-<h3 id="软路由">软路由</h3>
+<h2 id="软路由">软路由</h2>
 <p>常见的pc软路由软件有openwart，ros，voxy，其中lede是基于openwrt整合了较多功能，我们一般使用lead即可。ros是收费商业软件，稳定性和性能据说不错，不过无法拓展功能。voxy也是开源软件，但也无法拓展。lede编译比较复杂，依赖很多，我们可以使用现成的<a href="https://github.com/jandelgado/lede-dockerbuilder" target="_blank" rel="noopener noreffer">docker</a>来编译，方便很多。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">

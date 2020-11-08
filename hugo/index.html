@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/hugo\/"
-        },"genre": "posts","keywords": "vps","wordcount":  1080 ,
+        },"genre": "posts","keywords": "vps","wordcount":  1079 ,
         "url": "https:\/\/flyleon.github.io\/hugo\/","datePublished": "2020-10-29T08:33:02+08:00","dateModified": "2020-10-29T08:33:02+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">VPS配置之六hugo</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1080 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1079 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -129,22 +129,18 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#安装hugo">安装hugo</a></li>
-        <li><a href="#配置hugo">配置hugo</a></li>
-        <li><a href="#使用gihub管理blog和文章">使用gihub管理blog和文章</a></li>
-        <li><a href="#loveit设置">LoveIt设置</a></li>
-        <li><a href="#其他机器使用">其他机器使用</a></li>
-        <li><a href="#配置自己域名">配置自己域名</a></li>
-      </ul>
-    </li>
+    <li><a href="#安装hugo">安装hugo</a></li>
+    <li><a href="#配置hugo">配置hugo</a></li>
+    <li><a href="#使用gihub管理blog和文章">使用gihub管理blog和文章</a></li>
+    <li><a href="#loveit设置">LoveIt设置</a></li>
+    <li><a href="#其他机器使用">其他机器使用</a></li>
+    <li><a href="#配置自己域名">配置自己域名</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
 <p>hugo是快速的静态博客系统，可部署于github。我选择的是LoveIt主题,当然even也是很好的主题，但更适合文字博客，偏技术类博客loveit更现代，更适合。loveit功能很全，评论，搜索简单设置开箱即用，比较方便，设置文档也比较丰富。</p>
 </blockquote>
-<h3 id="安装hugo">安装hugo</h3>
+<h2 id="安装hugo">安装hugo</h2>
 <p>archlinux下安装hugo非常简单，只需一条命令，一个文件。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -154,7 +150,7 @@
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo pacman -S hugo
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="配置hugo">配置hugo</h3>
+</div><h2 id="配置hugo">配置hugo</h2>
 <ul>
 <li>建立博客
 使用hugo建立名为blog的本地博客。</li>
@@ -184,7 +180,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>新建文章并编译
+<li>建文章并编译
 不同主题要求的位置不同，需要注意，这点可以参照主题说明。</li>
 </ul>
 <div class="highlight"><div class="chroma">
@@ -208,7 +204,7 @@ hugo
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo serve --buildDrafts
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="使用gihub管理blog和文章">使用gihub管理blog和文章</h3>
+</div><h2 id="使用gihub管理blog和文章">使用gihub管理blog和文章</h2>
 <p>我们需要建立两个repo，分别用于文章管理和博客发布。其中博客发布我使用的是建立&lt;用户名&gt;.github.io，相对比较简单。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -336,7 +332,7 @@ git push -u origin master
 ./deploy.sh
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="loveit设置">LoveIt设置</h3>
+</div><h2 id="loveit设置">LoveIt设置</h2>
 <p>编辑config.coml,</p>
 <ul>
 <li>设置baseURL中文显示</li>
@@ -363,7 +359,7 @@ defaultContentLanguage = &#34;zh-cn&#34;
 </code></pre></td></tr></table>
 </div>
 </div><p>此svg可从awesome font网站下载放入images目录。</p>
-<h3 id="其他机器使用">其他机器使用</h3>
+<h2 id="其他机器使用">其他机器使用</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -388,7 +384,7 @@ cd themes/LoveIt
 git checkout master 
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="配置自己域名">配置自己域名</h3>
+</div><h2 id="配置自己域名">配置自己域名</h2>
 <ul>
 <li>设置域名CNAME
 在域名管理页面设置域名CNAME指向你的博客eopo。</li>

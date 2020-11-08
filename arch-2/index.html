@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/arch-2\/"
-        },"genre": "posts","keywords": "archlinux","wordcount":  627 ,
+        },"genre": "posts","keywords": "archlinux","wordcount":  658 ,
         "url": "https:\/\/flyleon.github.io\/arch-2\/","datePublished": "2020-10-22T10:19:52+08:00","dateModified": "2020-10-22T10:19:52+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Archlinux 优化之二</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-22">2020-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 627 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-22">2020-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 658 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -129,37 +129,49 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#bios-设置">BIOS 设置</a></li>
+    <li><a href="#安装网卡驱动">安装网卡驱动</a></li>
+    <li><a href="#音质提升">音质提升</a>
       <ul>
-        <li><a href="#bios-设置">BIOS 设置</a></li>
-        <li><a href="#安装网卡驱动">安装网卡驱动</a></li>
-        <li><a href="#音质提升">音质提升</a></li>
-        <li><a href="#护眼程序">护眼程序</a></li>
-        <li><a href="#ssd开启trim">SSD开启trim</a></li>
-        <li><a href="#升级固件版本">升级固件版本</a></li>
-        <li><a href="#boss-q35-蓝牙连接">BOSS Q35 蓝牙连接</a></li>
-        <li><a href="#dock">dock</a></li>
-        <li><a href="#全局菜单">全局菜单</a></li>
+        <li><a href="#设置pulseaudio">设置pulseaudio</a></li>
+        <li><a href="#设置alsa">设置ALSA</a></li>
       </ul>
     </li>
+    <li><a href="#护眼程序">护眼程序</a>
+      <ul>
+        <li><a href="#安装redshift">安装redshift</a></li>
+        <li><a href="#设置">设置</a></li>
+        <li><a href="#设置-1">设置</a></li>
+        <li><a href="#加入自启动">加入自启动</a></li>
+      </ul>
+    </li>
+    <li><a href="#ssd开启trim">SSD开启trim</a></li>
+    <li><a href="#升级固件版本">升级固件版本</a></li>
+    <li><a href="#boss-q35-蓝牙连接">BOSS Q35 蓝牙连接</a>
+      <ul>
+        <li><a href="#设置-2">设置</a></li>
+        <li><a href="#音质提升-1">音质提升</a></li>
+      </ul>
+    </li>
+    <li><a href="#dock">dock</a></li>
+    <li><a href="#全局菜单">全局菜单</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
 <p>archlinux 安装配置的文章网上很多，大多涉及源设置，输入法，字体美化，终端设置等等，但仍有很多细节缺失，为此将自己完善Thinkpad X1 carbon 7th 的过程简要记录备忘。</p>
 </blockquote>
-<h3 id="bios-设置">BIOS 设置</h3>
+<h2 id="bios-设置">BIOS 设置</h2>
 <ul>
 <li>禁止 &ldquo;Secure Boot&rdquo; Security -&gt; Secure Boot - Set to &ldquo;Disabled&rdquo;.</li>
 <li>节能  禁止 Config -&gt; Thunderbolt BIOS Assist Mode - Set to &ldquo;Enabled&rdquo;</li>
 <li>休眠模式 Config -&gt; Power -&gt; Sleep State
 引用自archlinux wiki</li>
 </ul>
-<h3 id="安装网卡驱动">安装网卡驱动</h3>
+<h2 id="安装网卡驱动">安装网卡驱动</h2>
 <p>broadcom-wl-dkms，每次升级内核后，都自动安装。</p>
-<h3 id="音质提升">音质提升</h3>
-<ul>
-<li>~/.config/pulse/daemon.conf</li>
-</ul>
+<h2 id="音质提升">音质提升</h2>
+<h3 id="设置pulseaudio">设置pulseaudio</h3>
+<p>编辑 ~/.config/pulse/daemon.conf</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -192,9 +204,8 @@
      daemonize = no
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>~/.asoundrc</li>
-</ul>
+</div><h3 id="设置alsa">设置ALSA</h3>
+<p>编辑 ~/.asoundrc</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -209,11 +220,18 @@
     }
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="护眼程序">护眼程序</h3>
-<ul>
-<li>安装redshift</li>
-<li>.config/redshift/config设置</li>
-</ul>
+</div><h2 id="护眼程序">护眼程序</h2>
+<h3 id="安装redshift">安装redshift</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo  pacman -S redshift
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="设置">设置</h3>
+<p>编辑 .config/redshift/config设置</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -268,9 +286,8 @@ screen=0
 
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>编辑 ~/.config/systemd/user/redshift.service文件</li>
-</ul>
+</div><h3 id="设置-1">设置</h3>
+<p>编辑 ~/.config/systemd/user/redshift.service文件</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -299,9 +316,7 @@ Restart=always
 WantedBy=graphical-session.target
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>加入自启动</li>
-</ul>
+</div><h3 id="加入自启动">加入自启动</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -310,7 +325,7 @@ WantedBy=graphical-session.target
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">systemctl --user enable redshift
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="ssd开启trim">SSD开启trim</h3>
+</div><h2 id="ssd开启trim">SSD开启trim</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -321,7 +336,7 @@ WantedBy=graphical-session.target
 sudo systemctl start fstrim.service
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="升级固件版本">升级固件版本</h3>
+</div><h2 id="升级固件版本">升级固件版本</h2>
 <p>安装fwupd</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -331,10 +346,9 @@ sudo systemctl start fstrim.service
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo fwupdmgr update
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="boss-q35-蓝牙连接">BOSS Q35 蓝牙连接</h3>
-<ul>
-<li>编辑 vim /etc/bluetooth/main.conf ，将</li>
-</ul>
+</div><h2 id="boss-q35-蓝牙连接">BOSS Q35 蓝牙连接</h2>
+<h3 id="设置-2">设置</h3>
+<p>编辑 vim /etc/bluetooth/main.conf</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -343,9 +357,7 @@ sudo systemctl start fstrim.service
 <pre class="chroma"><code class="language-fallback" data-lang="fallback"># ControllerMode = dual改为ControllerMode = bredr，重启bluetooth服务。
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>音质提升</li>
-</ul>
+</div><h3 id="音质提升-1">音质提升</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -354,12 +366,10 @@ sudo systemctl start fstrim.service
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">pacmd set-card-profile 1 a2dp_sink
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="dock">dock</h3>
-<pre><code>* 安装plank，将状态栏放于顶部
-</code></pre>
-<h3 id="全局菜单">全局菜单</h3>
-<pre><code>* vala-appmenu
-</code></pre>
+</div><h2 id="dock">dock</h2>
+<p>安装plank，将状态栏放于顶部</p>
+<h2 id="全局菜单">全局菜单</h2>
+<p>vala-appmenu</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
