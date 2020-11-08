@@ -136,13 +136,7 @@
     <li><a href="#加快启动速度">加快启动速度</a></li>
     <li><a href="#安装-xanmod-内核">安装 xanmod 内核</a></li>
     <li><a href="#efi-stub-启动">EFI STUB 启动</a></li>
-    <li><a href="#清理">清理</a>
-      <ul>
-        <li><a href="#清理孤立包">清理孤立包</a></li>
-        <li><a href="#清理日志">清理日志</a></li>
-        <li><a href="#清理缓存">清理缓存</a></li>
-      </ul>
-    </li>
+    <li><a href="#清理">清理</a></li>
     <li><a href="#makepkg速度优化">makepkg速度优化</a></li>
   </ul>
 </nav></div>
@@ -269,7 +263,9 @@ CPU类型缺省会在编译过程中提示。</div>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="清理">清理</h2>
-<h3 id="清理孤立包">清理孤立包</h3>
+<ul>
+<li>清理孤立包</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -278,7 +274,9 @@ CPU类型缺省会在编译过程中提示。</div>
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo pacman -Rns $(pacman -Qtdq)
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="清理日志">清理日志</h3>
+</div><ul>
+<li>清理日志</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -287,7 +285,9 @@ CPU类型缺省会在编译过程中提示。</div>
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">journalctl --vacum-size=50M
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="清理缓存">清理缓存</h3>
+</div><ul>
+<li>清理缓存</li>
+</ul>
 <p>慎用<code>sudo pacman -Scc</code>暴力清理，可以安装pacman-contrib包使用paccache清理。paccache清理缺省保留最近3次的升级的软件包，方便今后降级，而且通过参数可以控制清理内容。如<code>paccache -d</code>可以先查看删除内容,<code>paccache -r</code>删除缓冲包，<code>pacchche -rk1</code>删除最近一次升级外缓存包等等。</p>
 <h2 id="makepkg速度优化">makepkg速度优化</h2>
 <p>新建 ~/.makepkg.conf, 写入如下内容，优化生成的二进制文件， 加快编译速度， 加快软件包生成速度。</p>
