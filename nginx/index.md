@@ -2,7 +2,7 @@
 
 >nginx是常用服务器软件之一，高效，快速。我们的VPS需要它来建立网站、通过反向代理使用各种服务。从稳定性考虑，我的VPS使用Centos 7操作系统，网上资源也很丰富，便于搜索学习。
 
-# 安装nginx
+### 安装nginx
 * 安装EPEL仓库
 ```
 sudo yum install epel-release
@@ -22,7 +22,7 @@ sudo firewall-cmd --permanent --zone=public --add-service=http
 sudo firewall-cmd --permanent --zone=public --add-service=https
 sudo firewall-cmd --reload
 ```
-# 设置nginx
+### 设置nginx
 * 查看nginx设置文件位置。
 ```
 sudo nginx -t

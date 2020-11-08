@@ -129,20 +129,24 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#在服务器端设置">在服务器端设置</a></li>
-    <li><a href="#在客户端设置">在客户端设置</a></li>
+    <li>
+      <ul>
+        <li><a href="#在服务器端设置">在服务器端设置</a></li>
+        <li><a href="#在客户端设置">在客户端设置</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
 <p>为便于VPS管理设置，我们需要开启SSH，安全起见，SSH需要在/etc/ssh/sshd_config中进行以下设置。</p>
 </blockquote>
-<h2 id="在服务器端设置">在服务器端设置</h2>
+<h3 id="在服务器端设置">在服务器端设置</h3>
 <ul>
 <li>禁止root用户登录，找到<code>PermitRootLogin yes</code>改为no</li>
 <li>禁止密码登录，找到<code>PasswordAuthentication yes</code>，改为no。</li>
 <li>改变缺省端口，找到<code>Port 22</code>改为其他端口</li>
 </ul>
-<h2 id="在客户端设置">在客户端设置</h2>
+<h3 id="在客户端设置">在客户端设置</h3>
 <ul>
 <li>使用ssh-keygen生成key
 默认保存于.ssh目录中,id_rsa 为私钥，id_rsa.pub 为公钥。。</li>
