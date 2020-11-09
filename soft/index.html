@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/soft\/"
-        },"genre": "posts","keywords": "software","wordcount":  3331 ,
+        },"genre": "posts","keywords": "software","wordcount":  3021 ,
         "url": "https:\/\/flyleon.github.io\/soft\/","datePublished": "2020-11-01T14:49:57+08:00","dateModified": "2020-11-01T14:49:57+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">linux常用软件</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3331 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3021 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -310,8 +310,8 @@ URxvt.iso14755_52: false
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">URxvt.font:xft:Hack:style=Regular:antialias=True:pixelsize=22
-URxvt.boldFont:xft:Hack:style=Bold:antialias=True:pixelsize=22
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">URxvt.font:xft:Source Code Pro:style=Regular:antialias=True:pixelsize=22
+URxvt.boldFont:xft:Source Code Pro:style=Bold:antialias=True:pixelsize=22
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="shell">shell</h2>
@@ -340,7 +340,7 @@ oh-my-fish是fish功能拓展，<code>curl -L https://get.oh-my.fish | fish</cod
 <li>查看主题<code>omf theme</code>。</li>
 <li>安装主题<code>omf install **</code>。</li>
 <li>更新    <code>omf update omf</code></li>
-<li>安装包  <code>omf search **</code>。</li>
+<li>搜索包  <code>omf search **</code>。</li>
 <li>移除包  <code>omf remove **</code>。</li>
 <li>排错    <code>omf doctor</code></li>
 <li>卸载    <code>omf destroy</code></li>
@@ -476,8 +476,11 @@ highlight Normal guibg=NONE ctermbg=None
         </div>
     </div></p>
 <h2 id="私有网盘">私有网盘</h2>
-<p>filebrowser是一款简单、方便的网盘软件，只需一个文件。</p>
-<p>/etc/filebrowser/filebrowser.json</p>
+<p>filebrowser是一款简单、方便的网盘软件，安装只需一个文件。</p>
+<ul>
+<li>设置</li>
+</ul>
+<p>编辑<code>/etc/filebrowser/filebrowser.json</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -496,6 +499,8 @@ highlight Normal guibg=NONE ctermbg=None
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">  &#34;port&#34;: 7000,
@@ -514,9 +519,14 @@ highlight Normal guibg=NONE ctermbg=None
   &#34;allowNew&#34;: true,
   &#34;commands&#34;: [
     &#34;wget&#34;
+  ]
+}
 </code></pre></td></tr></table>
 </div>
-</div><p>/etc/systemd/system/filebrowser.service</p>
+</div><ul>
+<li>自启动</li>
+</ul>
+<p>编辑<code>/etc/systemd/system/filebrowser.service</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -547,9 +557,16 @@ PrivateTmp=true
 WantedBy=multi-user.target
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="frp内网穿透">frp内网穿透</h2>
+</div><ul>
+<li>文件目录根设置</li>
+</ul>
+<p>登录后，点击[设置]-&gt;[全局设置]-&gt;[用户默认设置]，将[目录范围]改为你想要的文件夹。</p>
+<h2 id="frp内网穿透">frp内网穿透</h2>
 <p>我们的宽带一般是没有公网地址的，为了能访问家中的nas服务器，需要安装内网穿透软件frp。</p>
-<p>/etc/systemd/system/frps.service</p>
+<ul>
+<li>自启动</li>
+</ul>
+<p>编辑<code>/etc/systemd/system/frps.service</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -582,122 +599,46 @@ ExecStart=/usr/bin/frps -c /etc/frps/frps.ini
 WantedBy=multi-user.target
 </code></pre></td></tr></table>
 </div>
-</div><p>/etc/frps/frps.ini</p>
+</div><ul>
+<li>设置</li>
+</ul>
+<p>编辑<code>/etc/frps/frps.ini</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span><span class="lnt">112
-</span><span class="lnt">113
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback"># [common] is integral section
@@ -706,113 +647,34 @@ WantedBy=multi-user.target
 # in square brackets, as in &#34;[::1]:80&#34;, &#34;[ipv6-host]:http&#34; or &#34;[ipv6-host%zone]:80&#34;
 bind_addr = 0.0.0.0
 bind_port = 5500
-
 # udp port to help make udp hole to penetrate nat
 #bind_udp_port =
-
 # udp port used for kcp protocol, it can be same with &#39;bind_port&#39;
 # if not set, kcp is disabled in frps
 #kcp_bind_port =
-
 # specify which address proxy will listen for, default value is same with bind_addr
 # proxy_bind_addr = 127.0.0.1
-
 # if you want to support virtual host, you must set the http port for listening (optional)
 # Note: http port and https port can be same with bind_port
 vhost_http_port = 8080
 vhost_https_port = 4433
-
-# response header timeout(seconds) for vhost http server, default is 60s
-# vhost_http_timeout = 60
-
-# TcpMuxHttpConnectPort specifies the port that the server listens for TCP
-# HTTP CONNECT requests. If the value is 0, the server will not multiplex TCP
-# requests on one single port. If it&#39;s not - it will listen on this value for
-# HTTP CONNECT requests. By default, this value is 0.
-# tcpmux_httpconnect_port = 1337
-
 # set dashboard_addr and dashboard_port to view dashboard of frps
 # dashboard_addr&#39;s default value is same with bind_addr
 # dashboard is available only if dashboard_port is set
 dashboard_addr = 0.0.0.0
 dashboard_port = 6443
-
 # dashboard user and passwd for basic auth protect, if not set, both default value is admin
-dashboard_user = leon
-dashboard_pwd = Gjbyhy@72
-
-# enable_prometheus will export prometheus metrics on {dashboard_addr}:{dashboard_port} in /metrics api.
-enable_prometheus = true
-
-# dashboard assets directory(only for debug mode)
-# assets_dir = ./static
-# console or real logFile path like ./frps.log
-log_file = ./frps.log
-
-# trace, debug, info, warn, error
-log_level = info
-
-log_max_days = 3
-
-# disable log colors when log_file is console, default is false
-disable_log_color = false
-
-# DetailedErrorsToClient defines whether to send the specific error (with debug info) to frpc. By default, this value is true.
-detailed_errors_to_client = true
-
+dashboard_user = 
+dashboard_pwd = 
 # AuthenticationMethod specifies what authentication method to use authenticate frpc with frps.
 # If &#34;token&#34; is specified - token will be read into login message.
 # If &#34;oidc&#34; is specified - OIDC (Open ID Connect) token will be issued using OIDC settings. By default, this value is &#34;token&#34;.
 authentication_method = token
-
-# AuthenticateHeartBeats specifies whether to include authentication token in heartbeats sent to frps. By default, this value is false.
-authenticate_heartbeats = false
-
-# AuthenticateNewWorkConns specifies whether to include authentication token in new work connections sent to frps. By default, this value is false.
-authenticate_new_work_conns = false
-
 # auth token
 token = 
-
-# OidcClientId specifies the client ID to use to get a token in OIDC authentication if AuthenticationMethod == &#34;oidc&#34;.
-# By default, this value is &#34;&#34;.
-oidc_client_id =
-
-# OidcClientSecret specifies the client secret to use to get a token in OIDC authentication if AuthenticationMethod == &#34;oidc&#34;.
-# By default, this value is &#34;&#34;.
-oidc_client_secret =
-
-# OidcAudience specifies the audience of the token in OIDC authentication if AuthenticationMethod == &#34;oidc&#34;. By default, this value is &#34;&#34;.
-oidc_audience =
- OidcTokenEndpointUrl specifies the URL which implements OIDC Token Endpoint.
-# It will be used to get an OIDC token if AuthenticationMethod == &#34;oidc&#34;. By default, this value is &#34;&#34;.
-oidc_token_endpoint_url =
-
-# heartbeat configure, it&#39;s not recommended to modify the default value
-# the default value of heartbeat_timeout is 90
-# heartbeat_timeout = 90
-
-# only allow frpc to bind ports you list, if you set nothing, there won&#39;t be any limit
-allow_ports = 2000-3000,3001,3003,4000-50000
-
-# pool_count in each proxy will change to max_pool_count if they exceed the maximum value
-max_pool_count = 5
-
-# max ports can be used for each client, default value is 0 means no limit
-max_ports_per_client = 0
-
-# TlsOnly specifies whether to only accept TLS-encrypted connections. By default, the value is false.
-tls_only = false
-
 # if subdomain_host is not empty, you can set subdomain when type is http or https in frpc&#39;s configure file
 # when subdomain is test, the host used by routing is test.frps.com
 subdomain_host = frps.com
-
-# if tcp stream multiplexing is used, default is true
-tcp_mux = true
-# custom 404 page for HTTP requests
-# custom_404_page = /path/to/404.h
-
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="中文输入法">中文输入法</h2>

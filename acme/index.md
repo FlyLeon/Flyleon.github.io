@@ -1,10 +1,10 @@
-# VPS配置之一acme证书申请
+# VPS配置之一使用acme申请证书
 
 
->Acme.sh能做什么？
-acme.sh可以从 let‘s encrypt（数字证书认证机构）生成免费的证书。并且可以自动化完成创建证书、安装证书、更新证书的流程。
+>Acme能做什么？
+acme.sh可以从 let‘s encrypt（数字证书认证机构）生成免费的证书。并且可以自动化完成创建证书、安装证书、更新证书。
 
-## 安装acme.sh
+## 安装acme
 ```
 curl https://get.acme.sh | sh
 ```
@@ -56,7 +56,7 @@ acme.sh --renew -d example.com --force
 ```
 46 0 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null
 ```
-## 更新acme.sh
+## 更新acme
 由于 acme 协议和 letsencrypt CA 都在频繁的更新, 因此 acme.sh 也经常更新以保持同步。
 ```
 acme.sh --upgrade
