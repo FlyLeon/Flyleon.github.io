@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/soft\/"
-        },"genre": "posts","keywords": "software","wordcount":  2986 ,
+        },"genre": "posts","keywords": "software","wordcount":  3077 ,
         "url": "https:\/\/flyleon.github.io\/soft\/","datePublished": "2020-11-01T14:49:57+08:00","dateModified": "2020-11-01T14:49:57+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,8 +120,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">linux常用软件</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2986 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-11-01">2020-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3077 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -159,6 +159,7 @@
             <div class="admonition-content"><ul>
 <li>一定要安装aur中的<code>urxvt-unicode-truecolor</code>来支持中文和真彩色。</li>
 <li>在wayland中，urxvt可通过.Xdefaults设置，以下设置均在其中。</li>
+<li>慎用URxvt.letterSpace设置字间距，在我机器上这为不同字体设置带来问题。</li>
 </ul>
 </div>
         </div>
@@ -178,7 +179,7 @@ URxvt.inputMethod:fcitx
 </div>
 </div><ul>
 <li>使用守护进程模式
-urxvt可采用守护模式使用，使用urxvtc启动终端，节省内存，更加快速。这里采用在sway内启动urxvtd守护进程。</li>
+urxvt可采用守护模式，使用urxvtc启动终端，节省内存，更加快速。这里采用在sway内启动urxvtd守护进程。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -662,9 +663,9 @@ subdomain_host = frps.com
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-MODIFIERS=&#34;@im=fcitx&#34;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT=fcitx
+XMODIFIERS    DEFAULT=\@im=fcitx
 </code></pre></td></tr></table>
 </div>
 </div><div class="details admonition tip open">
@@ -672,7 +673,12 @@ MODIFIERS=&#34;@im=fcitx&#34;
             <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content">更换Adwaita/缺省难看的键盘图标，可以安装其他主题替换/usr/share/icons/Adwaita/32x32/legacy/input-keyboard.png文件。</div>
+            <div class="admonition-content"><ul>
+<li>更换Adwaita/缺省难看的键盘图标，可以安装其他主题替换/usr/share/icons/Adwaita/32x32/legacy/input-keyboard.png文件。</li>
+<li>如仍无法切换输入模式可尝试重装fcitx，我的就是这样解决的，<code>sudo pacman -S fcitx</code>
+不知道是什么原因。</li>
+</ul>
+</div>
         </div>
     </div>
 <h2 id="文件管理器">文件管理器</h2>
