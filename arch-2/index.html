@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/arch-2\/"
-        },"genre": "posts","keywords": "archlinux","wordcount":  658 ,
+        },"genre": "posts","keywords": "archlinux","wordcount":  635 ,
         "url": "https:\/\/flyleon.github.io\/arch-2\/","datePublished": "2020-10-22T10:19:52+08:00","dateModified": "2020-10-22T10:19:52+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Archlinux 优化之二</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-22">2020-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 658 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-22">2020-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 635 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -139,17 +139,16 @@
     </li>
     <li><a href="#护眼程序">护眼程序</a>
       <ul>
-        <li><a href="#安装redshift">安装redshift</a></li>
+        <li><a href="#安装redshift-wayland-git">安装redshift-wayland-git</a></li>
         <li><a href="#设置">设置</a></li>
-        <li><a href="#设置-1">设置</a></li>
-        <li><a href="#加入自启动">加入自启动</a></li>
+        <li><a href="#启动">启动</a></li>
       </ul>
     </li>
     <li><a href="#ssd开启trim">SSD开启trim</a></li>
     <li><a href="#升级固件版本">升级固件版本</a></li>
     <li><a href="#boss-q35-蓝牙连接">BOSS Q35 蓝牙连接</a>
       <ul>
-        <li><a href="#设置-2">设置</a></li>
+        <li><a href="#设置-1">设置</a></li>
         <li><a href="#音质提升-1">音质提升</a></li>
       </ul>
     </li>
@@ -221,13 +220,13 @@
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="护眼程序">护眼程序</h2>
-<h3 id="安装redshift">安装redshift</h3>
+<h3 id="安装redshift-wayland-git">安装redshift-wayland-git</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo  pacman -S redshift
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">yay -S redshift-wayland-git
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="设置">设置</h3>
@@ -286,43 +285,18 @@ screen=0
 
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="设置-1">设置</h3>
-<p>编辑 ~/.config/systemd/user/redshift.service文件</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Unit]
-Description=Redshift display colour temperature adjustment
-Documentation=http://jonls.dk/redshift/
-After=graphical-session.target
-
-[Service]
-ExecStart=@bindir@/redshift
-Restart=always
-
-[Install]
-WantedBy=graphical-session.target
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="加入自启动">加入自启动</h3>
+</div><h3 id="启动">启动</h3>
+<p>编辑 ~/redshift.sh文件,增加可执行属性，手动启动。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">systemctl --user enable redshift
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>nohup redshift -m wayland &gt; /dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="ssd开启trim">SSD开启trim</h2>
@@ -347,7 +321,7 @@ sudo systemctl start fstrim.service
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="boss-q35-蓝牙连接">BOSS Q35 蓝牙连接</h2>
-<h3 id="设置-2">设置</h3>
+<h3 id="设置-1">设置</h3>
 <p>编辑 vim /etc/bluetooth/main.conf</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
