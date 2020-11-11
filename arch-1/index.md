@@ -46,7 +46,7 @@ sudo timeshift --restore --snapshot '2019-07-16_16-35-42' --skip-grub
    关闭 watchdog
 
 ## 安装 xanmod 内核
-优化桌面反应速度，启动速度，减少内存占用。
+可以优化桌面反应速度，启动速度，减少内存占用。
 ```
 yay -S linux-xanmod linux-xanmod-header --editmenu
 grub-mkconfig -o /boot/grub/grub.cfg
