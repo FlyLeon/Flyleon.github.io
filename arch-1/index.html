@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/arch-1\/"
-        },"genre": "posts","keywords": "archlinux","wordcount":  1331 ,
+        },"genre": "posts","keywords": "archlinux","wordcount":  1346 ,
         "url": "https:\/\/flyleon.github.io\/arch-1\/","datePublished": "2020-10-22T10:17:33+08:00","dateModified": "2020-10-22T10:17:33+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Archlinux 优化之一</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-22">2020-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1331 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-22">2020-10-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1346 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -242,7 +242,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 <li>可以通过编辑PKGBUILD文件，将其中<code>_microarchitectrue=0</code>改为自己的CPU类型，来简单优化一下。CPU类型缺省会在编译过程中提示,如没有，可以选择最接近的。</li>
 <li>如想使用cachy调度器，需要在PKGBUULD文件中将cachy=no改为yes。</li>
 <li>如需自定义kernel编译内容，可在PKGBUILD文件build内加入<code>make menuconfig</code>。</li>
-<li>如需定制内核，可插上所有使用的硬件、打开所需服务后，在PKGBUILD中build内加入<code>make localmodconfig</code>。使用后最大的变化就是编译时间和内核大小大为减少。，我的机器xanmod内核编译时间由近1小时减少到10份分钟，非常明显。</li>
+<li>如需精简内核，可插上所有使用的硬件、打开所需服务后，在PKGBUILD中build内加入<code>make localmodconfig</code>。使用后最大的变化就是编译时间和内核大小大为减少，我的机器xanmod内核编译时间由近1小时减少到10份分钟，非常明显。缺点是如需增加新硬件需重新编译。</li>
 <li>如需使用原有编译设定，可在PKGBUILD中build内加入<code>make olddefconfig</code> 。</li>
 </ul>
 </div>
