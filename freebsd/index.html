@@ -5,32 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>VPS配置之六hugo - 我的自留地</title><meta name="Description" content="我的自留地"><meta property="og:title" content="VPS配置之六hugo" />
-<meta property="og:description" content="hugo是快速的静态博客系统，可部署于github。我选择的是LoveIt主题,当然even也是很好的主题，但更适合文字博客，偏技术类博客l" />
+        <title> - 我的自留地</title><meta name="Description" content="我的自留地"><meta property="og:title" content="" />
+<meta property="og:description" content="：wq&mdash; title: &ldquo;Thinkpad T400上安装配置Freebsd 12&rdquo; date: 2021-02-24T11:47:40&#43;08:00 categories : [&ldquo;freebsd&rdquo;] tags : [&ldquo;freebsd&rdquo;] draft: false  最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文资源很少，也不准确。好在英文资料还不少，也很详细，参照安装也不难。下面简要记录自己走过的弯路，下面命令均需root权限。
+ 安装 安装iso选择 由于众所周知的原因，境外freebsd源速度极慢，使用bootonly.iso基本无法安装。我下载使用下载amd64-dvd1.iso来安装，安装过程中无需上网下载。
+网络配置 安装完成可配置网络，可以选择配置ipv4、dhcp或手动配置ip。
+使用国内源 更换pkg源  编辑/usr/local/etc/pkg/repos/FreeBSD.conf  禁用系统级 pkg 源。
+1  mkdir -p /usr/local/etc/pkg/repos   替换其中url为&rsquo;url: &ldquo;pkg&#43;http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&rsquo;
+-禁用系统级 pkg 源
+1 2  mv /etc/pkg/FreeBSD.conf /etc/pkg/FreeBSD.conf.back pkg update -f   更换update源 1  sed -i &#39;&#39; &#39;s/ServerName update.FreeBSD.org/ServerName update.freebsd.cn/g&#39; /etc/freebsd-update.conf   FreeBSD 安全补丁可以通过以下命令下载并安装补丁。
+1 2 3  freebsd-update fetch freebsd-update install #安装更新 pkg audit -F #查找所有软件包是否有漏洞补丁（安全审计）   freeBSD国内源 1 2 3 4 5 6 7  ports mirror at ports." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://flyleon.github.io/hugo/" />
+<meta property="og:url" content="https://flyleon.github.io/freebsd/" />
 <meta property="og:image" content="https://flyleon.github.io/logo.png"/>
-<meta property="article:published_time" content="2020-10-29T08:33:02+08:00" />
-<meta property="article:modified_time" content="2020-10-29T08:33:02+08:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
 
-<meta name="twitter:title" content="VPS配置之六hugo"/>
-<meta name="twitter:description" content="hugo是快速的静态博客系统，可部署于github。我选择的是LoveIt主题,当然even也是很好的主题，但更适合文字博客，偏技术类博客l"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="：wq&mdash; title: &ldquo;Thinkpad T400上安装配置Freebsd 12&rdquo; date: 2021-02-24T11:47:40&#43;08:00 categories : [&ldquo;freebsd&rdquo;] tags : [&ldquo;freebsd&rdquo;] draft: false  最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文资源很少，也不准确。好在英文资料还不少，也很详细，参照安装也不难。下面简要记录自己走过的弯路，下面命令均需root权限。
+ 安装 安装iso选择 由于众所周知的原因，境外freebsd源速度极慢，使用bootonly.iso基本无法安装。我下载使用下载amd64-dvd1.iso来安装，安装过程中无需上网下载。
+网络配置 安装完成可配置网络，可以选择配置ipv4、dhcp或手动配置ip。
+使用国内源 更换pkg源  编辑/usr/local/etc/pkg/repos/FreeBSD.conf  禁用系统级 pkg 源。
+1  mkdir -p /usr/local/etc/pkg/repos   替换其中url为&rsquo;url: &ldquo;pkg&#43;http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&rsquo;
+-禁用系统级 pkg 源
+1 2  mv /etc/pkg/FreeBSD.conf /etc/pkg/FreeBSD.conf.back pkg update -f   更换update源 1  sed -i &#39;&#39; &#39;s/ServerName update.FreeBSD.org/ServerName update.freebsd.cn/g&#39; /etc/freebsd-update.conf   FreeBSD 安全补丁可以通过以下命令下载并安装补丁。
+1 2 3  freebsd-update fetch freebsd-update install #安装更新 pkg audit -F #查找所有软件包是否有漏洞补丁（安全审计）   freeBSD国内源 1 2 3 4 5 6 7  ports mirror at ports."/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://flyleon.github.io/hugo/" /><link rel="prev" href="https://flyleon.github.io/ssh/" /><link rel="next" href="https://flyleon.github.io/wayland/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://flyleon.github.io/freebsd/" /><link rel="prev" href="https://flyleon.github.io/gfw/" /><link rel="next" href="https://flyleon.github.io/arch-1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "VPS配置之六hugo",
+        "headline": "",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/flyleon.github.io\/hugo\/"
-        },"genre": "posts","keywords": "vps","wordcount":  1079 ,
-        "url": "https:\/\/flyleon.github.io\/hugo\/","datePublished": "2020-10-29T08:33:02+08:00","dateModified": "2020-10-29T08:33:02+08:00","publisher": {
+            "@id": "https:\/\/flyleon.github.io\/freebsd\/"
+        },"genre": "posts","wordcount":  152 ,
+        "url": "https:\/\/flyleon.github.io\/freebsd\/","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -118,10 +131,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">VPS配置之六hugo</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-10-29">2020-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1079 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><article class="page single"><h1 class="single-title animated flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 152 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -129,44 +142,94 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#安装hugo">安装hugo</a></li>
-    <li><a href="#配置hugo">配置hugo</a></li>
-    <li><a href="#使用gihub管理blog和文章">使用gihub管理blog和文章</a></li>
-    <li><a href="#loveit设置">LoveIt设置</a></li>
-    <li><a href="#其他机器使用">其他机器使用</a></li>
-    <li><a href="#配置自己域名">配置自己域名</a></li>
+    <li><a href="#draft-false">：wq&mdash;title: &ldquo;Thinkpad T400上安装配置Freebsd 12&rdquo;date: 2021-02-24T11:47:40+08:00categories : [&ldquo;freebsd&rdquo;]tags : [&ldquo;freebsd&rdquo;]draft: false</a></li>
+    <li><a href="#安装">安装</a>
+      <ul>
+        <li><a href="#安装iso选择">安装iso选择</a></li>
+        <li><a href="#网络配置">网络配置</a></li>
+        <li><a href="#使用国内源">使用国内源</a>
+          <ul>
+            <li><a href="#更换pkg源">更换pkg源</a></li>
+            <li><a href="#更换update源">更换update源</a></li>
+            <li><a href="#freebsd国内源">freeBSD国内源</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#桌面配置">桌面配置</a>
+      <ul>
+        <li><a href="#编译使用suckless软件">编译使用suckless软件</a></li>
+        <li><a href="#中文输入">中文输入</a></li>
+        <li><a href="#字体">字体</a></li>
+        <li><a href="#其他设置">其他设置</a></li>
+      </ul>
+    </li>
+    <li><a href="#声音设置">声音设置</a>
+      <ul>
+        <li><a href="#解决声音小问题">解决声音小问题</a></li>
+        <li><a href="#设置51声音">设置5.1声音</a></li>
+      </ul>
+    </li>
+    <li><a href="#升级">升级</a>
+      <ul>
+        <li><a href="#更新到最新补丁版本">更新到最新补丁版本</a></li>
+        <li><a href="#升级版本">升级版本</a></li>
+        <li><a href="#重新引导到新内核并继续安装">重新引导到新内核并继续安装.</a></li>
+        <li><a href="#重新构建pkg程序完成升级">重新构建pkg程序，完成升级</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><blockquote>
-<p>hugo是快速的静态博客系统，可部署于github。我选择的是LoveIt主题,当然even也是很好的主题，但更适合文字博客，偏技术类博客loveit更现代，更适合。loveit功能很全，评论，搜索简单设置开箱即用，比较方便，设置文档也比较丰富。</p>
+            </div><div class="content" id="content"><h2 id="draft-false">：wq&mdash;
+title: &ldquo;Thinkpad T400上安装配置Freebsd 12&rdquo;
+date: 2021-02-24T11:47:40+08:00
+categories : [&ldquo;freebsd&rdquo;]
+tags : [&ldquo;freebsd&rdquo;]
+draft: false</h2>
+<blockquote>
+<p>最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文资源很少，也不准确。好在英文资料还不少，也很详细，参照安装也不难。下面简要记录自己走过的弯路，下面命令均需root权限。</p>
 </blockquote>
-<h2 id="安装hugo">安装hugo</h2>
-<p>archlinux下安装hugo非常简单，只需一条命令，一个文件。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo pacman -S hugo
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="配置hugo">配置hugo</h2>
+<h2 id="安装">安装</h2>
+<h3 id="安装iso选择">安装iso选择</h3>
+<p>由于众所周知的原因，境外freebsd源速度极慢，使用bootonly.iso基本无法安装。我下载使用下载amd64-dvd1.iso来安装，安装过程中无需上网下载。</p>
+<h3 id="网络配置">网络配置</h3>
+<p>安装完成可配置网络，可以选择配置ipv4、dhcp或手动配置ip。</p>
+<h3 id="使用国内源">使用国内源</h3>
+<h4 id="更换pkg源">更换pkg源</h4>
 <ul>
-<li>建立博客
-使用hugo建立名为blog的本地博客。</li>
+<li>编辑/usr/local/etc/pkg/repos/FreeBSD.conf</li>
 </ul>
+<p>禁用系统级 pkg 源。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo new site blog
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mkdir -p /usr/local/etc/pkg/repos
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>选择主题并编辑config</li>
-</ul>
-<p>进入blog目录，初始化git，下载主题，可以使用github的submodule功能添加你喜欢的主题。下面以LoveIt主题为例，一般主题设置可以copy主题目录内 examplesite内内容到blog下使用。比较重要的是config.coml内设置。</p>
+</div><p>替换其中url为&rsquo;url: &ldquo;pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&rsquo;</p>
+<p>-禁用系统级 pkg 源</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mv /etc/pkg/FreeBSD.conf /etc/pkg/FreeBSD.conf.back
+pkg update -f
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="更换update源">更换update源</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sed -i &#39;&#39; &#39;s/ServerName update.FreeBSD.org/ServerName update.freebsd.cn/g&#39; /etc/freebsd-update.conf
+</code></pre></td></tr></table>
+</div>
+</div><p>FreeBSD 安全补丁可以通过以下命令下载并安装补丁。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -174,192 +237,12 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd blog
-git init
-git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">freebsd-update fetch
+freebsd-update install #安装更新
+pkg audit -F  #查找所有软件包是否有漏洞补丁（安全审计）
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>建文章并编译
-不同主题要求的位置不同，需要注意，这点可以参照主题说明。</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo new posts/&lt;文章名&gt;.md
-hugo
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>本地测试</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo serve --buildDrafts
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="使用gihub管理blog和文章">使用gihub管理blog和文章</h2>
-<p>我们需要建立两个repo，分别用于文章管理和博客发布。其中博客发布我使用的是建立&lt;用户名&gt;.github.io，相对比较简单。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd publc
-git init
-git remote add &lt;用于发布的repo地址&gt;
-git -u orgin push
-rm -rf public
-git submodule add &lt;用于发布的repo地址&gt; public
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>在blog根目录下建立depoly.sh。</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
-</span><span class="cp"></span>   
-   <span class="c1"># If a command fails then the deploy stops</span>
-   <span class="nb">set</span> -e
-   
-   <span class="c1"># Print out commands before executing them</span>
-   <span class="nb">set</span> -x
-   
-   <span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[    0m\n&#34;</span>
-  
-  <span class="c1"># Build the project.</span>
-  hugo
-  
-  <span class="c1"># Go To Public folder</span>
-  <span class="nb">cd</span> public
-  
-  <span class="c1"># Add changes to git.</span>
-  git add .
-  
-  <span class="c1"># Commit changes.</span>
-  <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="s2">rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
-  <span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-          <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
-  <span class="k">fi</span>
-  git commit -m <span class="s2">&#34;</span>$<span class="s2">
-</span><span class="s2"># Push source and build repos.
-</span><span class="s2">  git push origin master
-</span><span class="s2">   
-</span><span class="s2"># Back to the origin folder
-</span><span class="s2"># cd ..
-</span><span class="s2"> 
-</span><span class="s2"># rm -rf public
-</span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>blog目录下submodudle初始化</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git submodule init                                
-</code></pre></td></tr></table>
-</div>
-</div><p>至此设置基本完成，如需上传文章需在blog下执行：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git add .
-git commit &#34;&#34;
-git push -u origin master
-</code></pre></td></tr></table>
-</div>
-</div><p>如需更新博客，需提前为的deploy.sh增加可运行属性：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">chmod +x deploy.sh
-./deploy.sh
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="loveit设置">LoveIt设置</h2>
-<p>编辑config.coml,</p>
-<ul>
-<li>设置baseURL中文显示</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">baseURL = &#34;https://gihub博客repo/&#34;
-defaultContentLanguage = &#34;zh-cn&#34;
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>设置header.title</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">logo = &#34;/images/kiss-wink-heart-regular.svg
-</code></pre></td></tr></table>
-</div>
-</div><p>此svg可从awesome font网站下载放入images目录。</p>
-<h2 id="其他机器使用">其他机器使用</h2>
+</div><h4 id="freebsd国内源">freeBSD国内源</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -369,55 +252,114 @@ defaultContentLanguage = &#34;zh-cn&#34;
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone &lt;文章管理repo&gt; blog
-cd blog
-git submodule init
-git submodule update
-cd public
-git checkout master
-cd ..
-cd themes/LoveIt
-git checkout master 
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">ports mirror at ports.freebsd.cn
+
+portsnap mirror at portsnap.freebsd.cn
+
+update mirror at update.freebsd.cn
+
+pkg mirror at pkg.freebsd.cn
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="配置自己域名">配置自己域名</h2>
-<ul>
-<li>设置域名CNAME
-在域名管理页面设置域名CNAME指向你的博客eopo。</li>
-<li>设置博客repo
-在博客仓库设置页面custom domain处填入你的域名，可勾选下面enforce HTTPS。</li>
-</ul>
-</div><div class="post-footer" id="post-footer">
+</div><h2 id="桌面配置">桌面配置</h2>
+<p>参照<a href="https://www.c0ffee.net/blog/freebsd-on-a-laptop/" target="_blank" rel="noopener noreffer">FreeBSD on a Laptop</a></p>
+<h3 id="编译使用suckless软件">编译使用suckless软件</h3>
+<p><code>dmenu、dwm、st、slstatus</code>均可在freeBSD中使用，但需按照以下修改<code>config.mk</code>，以在freeBSD下编译。将X11INC和X11LIB路径中的<code>X11R6</code>改为<code>local</code>，安装<code>pkgconf</code>，<code>pkg install pkfconf</code>，将<code>PKG_CONFIG</code>中<code>pkg-config</code>改为<code>/usr/local/bin/pkgconf</code>。需使用github上LukeSmith修改的st，可以背景透明，显示systray和输入中文。</p>
+<h3 id="中文输入">中文输入</h3>
+<p>安装<code>zh-fcitx</code>，使用<code>zh-fcitx-configtool</code>配置，但无法配置具体的输入法，直接使用linux下配置。配置文件位置为.config/fcitx。</p>
+<h3 id="字体">字体</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg install wqy-fonts nerd-font
+xset fp+ /usr/local/share/font/wqy
+xset rehash
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="其他设置">其他设置</h3>
+<p>使用picom背景透明，feh设置壁纸，slim登录。</p>
+<h2 id="声音设置">声音设置</h2>
+<h3 id="解决声音小问题">解决声音小问题</h3>
+<p>安装mixer调整音量，安装sndio
+mixer 显示各设备音量</p>
+<h3 id="设置51声音">设置5.1声音</h3>
+<h2 id="升级">升级</h2>
+<p>使用freebsd-update升级FreeBSD操作系统使用freebsd-update升级FreeBSD操作系统。</p>
+<h3 id="更新到最新补丁版本">更新到最新补丁版本</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">freebsd-update fetch
+freebsd-update install
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="升级版本">升级版本</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">freebsd-update upgrade -r 13.0-BETA3
+freebsd-update install
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="重新引导到新内核并继续安装">重新引导到新内核并继续安装.</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">reboot
+freebsd-update install
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="重新构建pkg程序完成升级">重新构建pkg程序，完成升级</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg-static upgrade -f
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2020-10-29</span>
+                <span>更新于 0001-01-01</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/hugo/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/freebsd/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://flyleon.github.io/hugo/" data-title="VPS配置之六hugo" data-via="xxxx" data-hashtags="vps"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://flyleon.github.io/hugo/" data-hashtag="vps"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://flyleon.github.io/hugo/" data-title="VPS配置之六hugo" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://flyleon.github.io/hugo/" data-title="VPS配置之六hugo"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://flyleon.github.io/hugo/" data-title="VPS配置之六hugo"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://flyleon.github.io/hugo/" data-title="VPS配置之六hugo" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://flyleon.github.io/hugo/" data-title="VPS配置之六hugo" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://flyleon.github.io/hugo/" data-title="VPS配置之六hugo"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://flyleon.github.io/freebsd/" data-title="" data-via="xxxx"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://flyleon.github.io/freebsd/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://flyleon.github.io/freebsd/" data-title="" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://flyleon.github.io/freebsd/" data-title=""><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://flyleon.github.io/freebsd/" data-title=""><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://flyleon.github.io/freebsd/" data-title="" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://flyleon.github.io/freebsd/" data-title="" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://flyleon.github.io/freebsd/" data-title=""><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vps/">vps</a></section>
+        <section class="post-tags"></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/ssh/" class="prev" rel="prev" title="VPS配置之五SSH"><i class="fas fa-angle-left fa-fw"></i>VPS配置之五SSH</a>
-            <a href="/wayland/" class="next" rel="next" title="使用Wayland和sway">使用Wayland和sway<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/gfw/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw"></i></a>
+            <a href="/arch-1/" class="next" rel="next" title="Archlinux 优化之一">Archlinux 优化之一<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
