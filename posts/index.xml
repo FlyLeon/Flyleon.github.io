@@ -3,7 +3,21 @@
         <title>所有文章 - 我的自留地</title>
         <link>https://flyleon.github.io/posts/</link>
         <description>所有文章 | 我的自留地</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 30 Nov 2020 14:21:04 &#43;0800</lastBuildDate><atom:link href="https://flyleon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 24 Feb 2021 11:47:40 &#43;0800</lastBuildDate><atom:link href="https://flyleon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Thinkpad T400上安装配置Freebsd 12</title>
+    <link>https://flyleon.github.io/freebsd/</link>
+    <pubDate>Wed, 24 Feb 2021 11:47:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/freebsd/</guid>
+    <description><![CDATA[最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文]]></description>
+</item><item>
+    <title>我喜欢的菜（二）</title>
+    <link>https://flyleon.github.io/food-2/</link>
+    <pubDate>Wed, 09 Dec 2020 14:39:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/food-2/</guid>
+    <description><![CDATA[感觉还是不错的。 糖醋排骨 食材 排骨、葱、姜、桂皮、4个八角 调料 料酒、冰糖、糖、生抽、醋 步骤 排骨浸泡冷水30分钟以上，泡出血水。 少许水，小火炒糖]]></description>
+</item><item>
     <title>我喜欢的菜（一）</title>
     <link>https://flyleon.github.io/food-1/</link>
     <pubDate>Mon, 30 Nov 2020 14:21:04 &#43;0800</pubDate>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>https://flyleon.github.io/hugo/</guid>
     <description><![CDATA[hugo是快速的静态博客系统，可部署于github。我选择的是LoveIt主题,当然even也是很好的主题，但更适合文字博客，偏技术类博客l]]></description>
-</item><item>
-    <title>VPS配置之五SSH</title>
-    <link>https://flyleon.github.io/ssh/</link>
-    <pubDate>Tue, 27 Oct 2020 18:01:04 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/ssh/</guid>
-    <description><![CDATA[为便于VPS管理设置，我们需要开启SSH，安全起见，SSH需要在/etc/ssh/sshd_config中进行以下设置。 在服务器端设置 禁止r]]></description>
-</item><item>
-    <title>VPS配置之二Nginx</title>
-    <link>https://flyleon.github.io/nginx/</link>
-    <pubDate>Tue, 27 Oct 2020 17:10:45 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/nginx/</guid>
-    <description><![CDATA[nginx是常用服务器软件之一，高效，快速。我们的VPS需要它来建立网站、通过反向代理使用各种服务。从稳定性考虑，我的VPS使用Centos]]></description>
 </item></channel>
 </rss>

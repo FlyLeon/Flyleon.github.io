@@ -5,45 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title> - 我的自留地</title><meta name="Description" content="我的自留地"><meta property="og:title" content="" />
-<meta property="og:description" content="：wq&mdash; title: &ldquo;Thinkpad T400上安装配置Freebsd 12&rdquo; date: 2021-02-24T11:47:40&#43;08:00 categories : [&ldquo;freebsd&rdquo;] tags : [&ldquo;freebsd&rdquo;] draft: false  最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文资源很少，也不准确。好在英文资料还不少，也很详细，参照安装也不难。下面简要记录自己走过的弯路，下面命令均需root权限。
- 安装 安装iso选择 由于众所周知的原因，境外freebsd源速度极慢，使用bootonly.iso基本无法安装。我下载使用下载amd64-dvd1.iso来安装，安装过程中无需上网下载。
-网络配置 安装完成可配置网络，可以选择配置ipv4、dhcp或手动配置ip。
-使用国内源 更换pkg源  编辑/usr/local/etc/pkg/repos/FreeBSD.conf  禁用系统级 pkg 源。
-1  mkdir -p /usr/local/etc/pkg/repos   替换其中url为&rsquo;url: &ldquo;pkg&#43;http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&rsquo;
--禁用系统级 pkg 源
-1 2  mv /etc/pkg/FreeBSD.conf /etc/pkg/FreeBSD.conf.back pkg update -f   更换update源 1  sed -i &#39;&#39; &#39;s/ServerName update.FreeBSD.org/ServerName update.freebsd.cn/g&#39; /etc/freebsd-update.conf   FreeBSD 安全补丁可以通过以下命令下载并安装补丁。
-1 2 3  freebsd-update fetch freebsd-update install #安装更新 pkg audit -F #查找所有软件包是否有漏洞补丁（安全审计）   freeBSD国内源 1 2 3 4 5 6 7  ports mirror at ports." />
+        <title>Thinkpad T400上安装配置Freebsd 12 - 我的自留地</title><meta name="Description" content="我的自留地"><meta property="og:title" content="Thinkpad T400上安装配置Freebsd 12" />
+<meta property="og:description" content="最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/freebsd/" />
 <meta property="og:image" content="https://flyleon.github.io/logo.png"/>
-
+<meta property="article:published_time" content="2021-02-24T11:47:40+08:00" />
+<meta property="article:modified_time" content="2021-02-24T11:47:40+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
 
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="：wq&mdash; title: &ldquo;Thinkpad T400上安装配置Freebsd 12&rdquo; date: 2021-02-24T11:47:40&#43;08:00 categories : [&ldquo;freebsd&rdquo;] tags : [&ldquo;freebsd&rdquo;] draft: false  最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文资源很少，也不准确。好在英文资料还不少，也很详细，参照安装也不难。下面简要记录自己走过的弯路，下面命令均需root权限。
- 安装 安装iso选择 由于众所周知的原因，境外freebsd源速度极慢，使用bootonly.iso基本无法安装。我下载使用下载amd64-dvd1.iso来安装，安装过程中无需上网下载。
-网络配置 安装完成可配置网络，可以选择配置ipv4、dhcp或手动配置ip。
-使用国内源 更换pkg源  编辑/usr/local/etc/pkg/repos/FreeBSD.conf  禁用系统级 pkg 源。
-1  mkdir -p /usr/local/etc/pkg/repos   替换其中url为&rsquo;url: &ldquo;pkg&#43;http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&rsquo;
--禁用系统级 pkg 源
-1 2  mv /etc/pkg/FreeBSD.conf /etc/pkg/FreeBSD.conf.back pkg update -f   更换update源 1  sed -i &#39;&#39; &#39;s/ServerName update.FreeBSD.org/ServerName update.freebsd.cn/g&#39; /etc/freebsd-update.conf   FreeBSD 安全补丁可以通过以下命令下载并安装补丁。
-1 2 3  freebsd-update fetch freebsd-update install #安装更新 pkg audit -F #查找所有软件包是否有漏洞补丁（安全审计）   freeBSD国内源 1 2 3 4 5 6 7  ports mirror at ports."/>
+<meta name="twitter:title" content="Thinkpad T400上安装配置Freebsd 12"/>
+<meta name="twitter:description" content="最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://flyleon.github.io/freebsd/" /><link rel="prev" href="https://flyleon.github.io/gfw/" /><link rel="next" href="https://flyleon.github.io/arch-1/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://flyleon.github.io/freebsd/" /><link rel="prev" href="https://flyleon.github.io/food-2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "",
+        "headline": "Thinkpad T400上安装配置Freebsd 12",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/freebsd\/"
-        },"genre": "posts","wordcount":  152 ,
-        "url": "https:\/\/flyleon.github.io\/freebsd\/","publisher": {
+        },"genre": "posts","keywords": "freebsd","wordcount":  1007 ,
+        "url": "https:\/\/flyleon.github.io\/freebsd\/","datePublished": "2021-02-24T11:47:40+08:00","dateModified": "2021-02-24T11:47:40+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -131,10 +118,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX"></h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 152 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Thinkpad T400上安装配置Freebsd 12</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/freebsd/"><i class="far fa-folder fa-fw"></i>freebsd</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-24">2021-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1007 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -142,7 +129,6 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#draft-false">：wq&mdash;title: &ldquo;Thinkpad T400上安装配置Freebsd 12&rdquo;date: 2021-02-24T11:47:40+08:00categories : [&ldquo;freebsd&rdquo;]tags : [&ldquo;freebsd&rdquo;]draft: false</a></li>
     <li><a href="#安装">安装</a>
       <ul>
         <li><a href="#安装iso选择">安装iso选择</a></li>
@@ -180,13 +166,7 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="draft-false">：wq&mdash;
-title: &ldquo;Thinkpad T400上安装配置Freebsd 12&rdquo;
-date: 2021-02-24T11:47:40+08:00
-categories : [&ldquo;freebsd&rdquo;]
-tags : [&ldquo;freebsd&rdquo;]
-draft: false</h2>
-<blockquote>
+            </div><div class="content" id="content"><blockquote>
 <p>最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文资源很少，也不准确。好在英文资料还不少，也很详细，参照安装也不难。下面简要记录自己走过的弯路，下面命令均需root权限。</p>
 </blockquote>
 <h2 id="安装">安装</h2>
@@ -337,7 +317,7 @@ freebsd-update install
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 0001-01-01</span>
+                <span>更新于 2021-02-24</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -346,20 +326,19 @@ freebsd-update install
                             <a class="link-to-markdown" href="/freebsd/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://flyleon.github.io/freebsd/" data-title="" data-via="xxxx"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://flyleon.github.io/freebsd/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://flyleon.github.io/freebsd/" data-title="" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://flyleon.github.io/freebsd/" data-title=""><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://flyleon.github.io/freebsd/" data-title=""><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://flyleon.github.io/freebsd/" data-title="" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://flyleon.github.io/freebsd/" data-title="" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://flyleon.github.io/freebsd/" data-title=""><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://flyleon.github.io/freebsd/" data-title="Thinkpad T400上安装配置Freebsd 12" data-via="xxxx" data-hashtags="freebsd"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://flyleon.github.io/freebsd/" data-hashtag="freebsd"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://flyleon.github.io/freebsd/" data-title="Thinkpad T400上安装配置Freebsd 12" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://flyleon.github.io/freebsd/" data-title="Thinkpad T400上安装配置Freebsd 12"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://flyleon.github.io/freebsd/" data-title="Thinkpad T400上安装配置Freebsd 12"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://flyleon.github.io/freebsd/" data-title="Thinkpad T400上安装配置Freebsd 12" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://flyleon.github.io/freebsd/" data-title="Thinkpad T400上安装配置Freebsd 12" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://flyleon.github.io/freebsd/" data-title="Thinkpad T400上安装配置Freebsd 12"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/freebsd/">freebsd</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/gfw/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw"></i></a>
-            <a href="/arch-1/" class="next" rel="next" title="Archlinux 优化之一">Archlinux 优化之一<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/food-2/" class="prev" rel="prev" title="我喜欢的菜（二）"><i class="fas fa-angle-left fa-fw"></i>我喜欢的菜（二）</a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
