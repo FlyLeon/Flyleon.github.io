@@ -4,15 +4,12 @@
     ><url>
             <loc>https://flyleon.github.io/about/</loc><lastmod>2017-08-28T21:41:52&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/categories/</loc><lastmod>2021-02-24T11:47:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://flyleon.github.io/categories/freebsd/</loc><lastmod>2021-02-24T11:47:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://flyleon.github.io/tags/freebsd/</loc><lastmod>2021-02-24T11:47:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://flyleon.github.io/categories/freebsd/</loc><lastmod>2021-02-24T11:47:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://flyleon.github.io/posts/</loc><lastmod>2021-02-24T11:47:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://flyleon.github.io/tags/</loc><lastmod>2021-02-24T11:47:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://flyleon.github.io/freebsd/</loc><lastmod>2021-02-24T11:47:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://flyleon.github.io/</loc><lastmod>2021-02-24T11:47:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://flyleon.github.io/wm/</loc><lastmod>2021-02-06T21:29:02&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://flyleon.github.io/categories/linux/</loc><lastmod>2021-02-06T21:29:02&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>https://flyleon.github.io/tags/wm/</loc><lastmod>2021-02-06T21:29:02&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://flyleon.github.io/categories/n1/</loc><lastmod>2021-01-14T11:30:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/n1/</loc><lastmod>2021-01-14T11:30:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/categories/openwrt/</loc><lastmod>2021-01-14T11:30:45&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -28,6 +25,7 @@
             <loc>https://flyleon.github.io/food-1/</loc><lastmod>2020-11-30T14:21:04&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/tags/%E8%99%BE/</loc><lastmod>2020-11-30T14:21:04&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/tags/%E9%B2%AB%E9%B1%BC/</loc><lastmod>2020-11-30T14:21:04&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://flyleon.github.io/categories/linux/</loc><lastmod>2020-11-11T11:27:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/tags/redshift/</loc><lastmod>2020-11-11T11:27:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/tags/wayland/</loc><lastmod>2020-11-11T11:27:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/redshift/</loc><lastmod>2020-11-11T11:27:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -50,7 +48,8 @@
             <loc>https://flyleon.github.io/tags/archlinux/</loc><lastmod>2020-10-22T10:19:52&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/arch-2/</loc><lastmod>2020-10-22T10:19:52&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/arch-1/</loc><lastmod>2020-10-22T10:17:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://flyleon.github.io/gfw/</loc><priority>0</priority></url><url>
+            <loc>https://flyleon.github.io/gfw/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://flyleon.github.io/wm/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/tags/content/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/tags/installation/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://flyleon.github.io/categories/documentation/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
