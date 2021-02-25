@@ -20,7 +20,7 @@
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://flyleon.github.io/freebsd/" /><link rel="prev" href="https://flyleon.github.io/food-2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://flyleon.github.io/freebsd/" /><link rel="prev" href="https://flyleon.github.io/wm/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/freebsd\/"
-        },"genre": "posts","keywords": "freebsd","wordcount":  1007 ,
+        },"genre": "posts","keywords": "freebsd","wordcount":  1178 ,
         "url": "https:\/\/flyleon.github.io\/freebsd\/","datePublished": "2021-02-24T11:47:40+08:00","dateModified": "2021-02-24T11:47:40+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Thinkpad T400上安装配置Freebsd 12</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/freebsd/"><i class="far fa-folder fa-fw"></i>freebsd</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-24">2021-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1007 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-24">2021-02-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1178 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -152,8 +152,10 @@
     </li>
     <li><a href="#声音设置">声音设置</a>
       <ul>
-        <li><a href="#解决声音小问题">解决声音小问题</a></li>
+        <li><a href="#解决音量小问题">解决音量小问题</a></li>
         <li><a href="#设置51声音">设置5.1声音</a></li>
+        <li><a href="#设置音量调节按键">设置音量调节按键</a></li>
+        <li><a href="#输出自动切换">输出自动切换</a></li>
       </ul>
     </li>
     <li><a href="#升级">升级</a>
@@ -188,7 +190,7 @@
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">mkdir -p /usr/local/etc/pkg/repos
 </code></pre></td></tr></table>
 </div>
-</div><p>替换其中url为&rsquo;url: &ldquo;pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&rsquo;</p>
+</div><p>替换其中url为<code>pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest</code></p>
 <p>-禁用系统级 pkg 源</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -263,13 +265,46 @@ xset rehash
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="其他设置">其他设置</h3>
-<p>使用picom背景透明，feh设置壁纸，slim登录。</p>
+<p>在<code>.xinitrc</code>中使用<code>picom</code>背景透明，<code>feh</code>设置壁纸，<code>slim</code>登录。</p>
 <h2 id="声音设置">声音设置</h2>
-<h3 id="解决声音小问题">解决声音小问题</h3>
-<p>安装mixer调整音量，安装sndio
-mixer 显示各设备音量</p>
+<h3 id="解决音量小问题">解决音量小问题</h3>
+<p>安装<code>mixer</code>调整音量，安装<code>sndio</code>改善音质。
+<code>mixer</code> 显示各设备音量，<code>mixer -s vol 100</code>设置音量为<code>100</code>。</p>
 <h3 id="设置51声音">设置5.1声音</h3>
-<h2 id="升级">升级</h2>
+<p>编辑<code>/etc/sysctl.conf</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">dev.pcm.0.play.vchanformat=s16le:5.1
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="设置音量调节按键">设置音量调节按键</h3>
+<p>修改dwm的<code>config.h</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{0, XF86XK_AudioLowerVolume, spawn, SHCMD(&#34;mixer vol -5&#34;)},
+{0, XF86XK_AudioRaiseVolume, spawn, SHCMD(&#34;mixer vol +5 &#34;)},
+{0, XF86XK_AudioMute, spawn, SHCMD(&#34;mixer -s 0&#34;)},
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="输出自动切换">输出自动切换</h3>
+<p>编辑`/etc/sysctl.conf</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hw.snd.degault_auto=2
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="升级">升级</h2>
 <p>使用freebsd-update升级FreeBSD操作系统使用freebsd-update升级FreeBSD操作系统。</p>
 <h3 id="更新到最新补丁版本">更新到最新补丁版本</h3>
 <div class="highlight"><div class="chroma">
@@ -338,7 +373,7 @@ freebsd-update install
         </section>
     </div>
 
-    <div class="post-nav"><a href="/food-2/" class="prev" rel="prev" title="我喜欢的菜（二）"><i class="fas fa-angle-left fa-fw"></i>我喜欢的菜（二）</a></div>
+    <div class="post-nav"><a href="/wm/" class="prev" rel="prev" title="Archlinux设置窗口管理器(wm)"><i class="fas fa-angle-left fa-fw"></i>Archlinux设置窗口管理器(wm)</a></div>
 </div>
 <div id="comments"><div id="utterances"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.

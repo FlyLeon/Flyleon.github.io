@@ -19,7 +19,7 @@
 ```
 mkdir -p /usr/local/etc/pkg/repos
 ```
-替换其中url为'url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest'
+替换其中url为`pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest`
 
 -禁用系统级 pkg 源
 ```
@@ -63,15 +63,31 @@ xset fp+ /usr/local/share/font/wqy
 xset rehash
 ```
 ### 其他设置
-使用picom背景透明，feh设置壁纸，slim登录。
+在`.xinitrc`中使用`picom`背景透明，`feh`设置壁纸，`slim`登录。
 ## 声音设置
 
-### 解决声音小问题
+### 解决音量小问题
 
-安装mixer调整音量，安装sndio
-mixer 显示各设备音量
+安装`mixer`调整音量，安装`sndio`改善音质。
+`mixer` 显示各设备音量，`mixer -s vol 100`设置音量为`100`。
 
 ### 设置5.1声音
+编辑`/etc/sysctl.conf`
+```
+dev.pcm.0.play.vchanformat=s16le:5.1
+```
+### 设置音量调节按键
+修改dwm的`config.h`。
+```
+{0, XF86XK_AudioLowerVolume, spawn, SHCMD("mixer vol -5")},
+{0, XF86XK_AudioRaiseVolume, spawn, SHCMD("mixer vol +5 ")},
+{0, XF86XK_AudioMute, spawn, SHCMD("mixer -s 0")},
+```
+###  输出自动切换
+编辑`/etc/sysctl.conf
+```
+hw.snd.degault_auto=2
+```
 
 ## 升级
 

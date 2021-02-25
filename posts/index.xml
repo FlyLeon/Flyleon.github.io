@@ -11,14 +11,21 @@
     <guid>https://flyleon.github.io/freebsd/</guid>
     <description><![CDATA[最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文]]></description>
 </item><item>
-    <title>我喜欢的菜（二）</title>
+    <title>Archlinux设置窗口管理器(wm)</title>
+    <link>https://flyleon.github.io/wm/</link>
+    <pubDate>Sat, 06 Feb 2021 21:29:02 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/wm/</guid>
+    <description><![CDATA[最近试试在archlinux下使用titling窗口管理器，包括大名鼎鼎的i3、bspwm、dwm、qtile和xmonad，发现打开了新世]]></description>
+</item><item>
+    <title>美味的菜（二）</title>
     <link>https://flyleon.github.io/food-2/</link>
     <pubDate>Wed, 09 Dec 2020 14:39:17 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://flyleon.github.io/food-2/</guid>
     <description><![CDATA[感觉还是不错的。 糖醋排骨 食材 排骨、葱、姜、桂皮、4个八角 调料 料酒、冰糖、糖、生抽、醋 步骤 排骨浸泡冷水30分钟以上，泡出血水。 少许水，小火炒糖]]></description>
 </item><item>
-    <title>我喜欢的菜（一）</title>
+    <title>美味的菜（一）</title>
     <link>https://flyleon.github.io/food-1/</link>
     <pubDate>Mon, 30 Nov 2020 14:21:04 &#43;0800</pubDate>
     <author>作者</author>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://flyleon.github.io/wayland/</guid>
     <description><![CDATA[根据维基百科，Wayland是一个通信协议，规定了显示服务器与其客户机之间的通信方式，而使用这个协议的显示服务器称为Wayland Compo]]></description>
-</item><item>
-    <title>VPS配置之六hugo</title>
-    <link>https://flyleon.github.io/hugo/</link>
-    <pubDate>Thu, 29 Oct 2020 08:33:02 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/hugo/</guid>
-    <description><![CDATA[hugo是快速的静态博客系统，可部署于github。我选择的是LoveIt主题,当然even也是很好的主题，但更适合文字博客，偏技术类博客l]]></description>
 </item></channel>
 </rss>
