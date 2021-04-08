@@ -1,4 +1,4 @@
-# Big sur、windows10、archlinx三系统配置Bluetooth
+# Big sur、windows10、archlinux三系统配置Bluetooth
 
 > 我在`TkinkPad X1`上同时安装了`windows`、`Archlinux`和`Big Sur`，三个系统可共用蓝牙耳机。首先在三个系统分别连接蓝牙耳机，其次在 `Big Sur`中导出连接消息，查看连接密码。再次修改`windows`和`Archlinux`连接密码。注意`windows`和`Archlinux`连接密码`Big Sur`连接密码从后向前每两位为一组颠倒，同时`Archlinux`的连接密码字母需大写。
 - 蓝牙耳机配对`windows`
