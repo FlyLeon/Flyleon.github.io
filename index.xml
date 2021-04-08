@@ -41,6 +41,13 @@
     <guid>https://flyleon.github.io/about-american/</guid>
     <description><![CDATA[本文1946年原载于加利福尼亚州贝弗利希尔斯市一份以保护美国理想为宗旨的电影协会刊物《警戒》。文章的目的在于定义和阐明政治领域的基本原理，所]]></description>
 </item><item>
+    <title>Big sur、windows10、archlinx三系统配置Bluetooth</title>
+    <link>https://flyleon.github.io/bluetooth/</link>
+    <pubDate>Tue, 16 Mar 2021 09:43:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/bluetooth/</guid>
+    <description><![CDATA[我在TkinkPad X1上同时安装了windows、Archlinux和Big Sur，三个系统可共用蓝牙耳机。首先在三个系统分别连接蓝牙耳机]]></description>
+</item><item>
     <title>Debian桌面使用安装配置</title>
     <link>https://flyleon.github.io/debian/</link>
     <pubDate>Tue, 16 Mar 2021 08:42:16 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://flyleon.github.io/n1/</guid>
     <description><![CDATA[最近在拼多多买了一台N1，参照网上说明设置为旁路有，由于上网。操作很简单，不需要usb直连线，固件用就网上大神编译好的。 N1 降级 用HDMI视频]]></description>
-</item><item>
-    <title>美味的菜（二）</title>
-    <link>https://flyleon.github.io/food-2/</link>
-    <pubDate>Wed, 09 Dec 2020 14:39:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/food-2/</guid>
-    <description><![CDATA[感觉还是不错的。 糖醋排骨 食材 排骨、葱、姜、桂皮、4个八角 调料 料酒、冰糖、糖、生抽、醋 步骤 排骨浸泡冷水30分钟以上，泡出血水。 少许水，小火炒糖]]></description>
 </item></channel>
 </rss>
