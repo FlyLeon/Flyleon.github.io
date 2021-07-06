@@ -3,9 +3,16 @@
         <title>我的自留地</title>
         <link>https://flyleon.github.io/</link>
         <description>我的自留地</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 07 Apr 2021 14:16:12 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 06 Jul 2021 08:38:12 &#43;0800</lastBuildDate>
             <atom:link href="https://flyleon.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>苏格拉底与孔子的言说方式比较</title>
+    <link>https://flyleon.github.io/suge/</link>
+    <pubDate>Tue, 06 Jul 2021 08:38:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/suge/</guid>
+    <description><![CDATA[[内容提要] 本文通过对古希腊苏格拉底的对话与孔子的《论语》在言说方式(logos)上的比较，证明苏格拉底的对话把言说标准确立于言说本身，具有]]></description>
+</item><item>
     <title>读书：《漫步华尔街》</title>
     <link>https://flyleon.github.io/manbuhuxerjie/</link>
     <pubDate>Wed, 07 Apr 2021 14:16:12 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://flyleon.github.io/wm/</guid>
     <description><![CDATA[最近试试在archlinux下使用titling窗口管理器，包括大名鼎鼎的i3、bspwm、dwm、qtile和xmonad，发现打开了新世]]></description>
-</item><item>
-    <title>N1使用openwrt做旁路由</title>
-    <link>https://flyleon.github.io/n1/</link>
-    <pubDate>Thu, 14 Jan 2021 11:30:45 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/n1/</guid>
-    <description><![CDATA[最近在拼多多买了一台N1，参照网上说明设置为旁路有，由于上网。操作很简单，不需要usb直连线，固件用就网上大神编译好的。 N1 降级 用HDMI视频]]></description>
 </item></channel>
 </rss>
