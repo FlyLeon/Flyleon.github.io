@@ -3,9 +3,16 @@
         <title>我的自留地</title>
         <link>https://flyleon.github.io/</link>
         <description>我的自留地</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 06 Jul 2021 08:38:12 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 07 Jul 2021 08:50:20 &#43;0800</lastBuildDate>
             <atom:link href="https://flyleon.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>声音--民族主义</title>
+    <link>https://flyleon.github.io/natian/</link>
+    <pubDate>Wed, 07 Jul 2021 08:50:20 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/natian/</guid>
+    <description><![CDATA[民族主义]]></description>
+</item><item>
     <title>声音：《邓晓芒——苏格拉底与孔子的言说方式比较》</title>
     <link>https://flyleon.github.io/suge/</link>
     <pubDate>Tue, 06 Jul 2021 08:38:12 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://flyleon.github.io/freebsd/</guid>
     <description><![CDATA[最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文]]></description>
-</item><item>
-    <title>Archlinux设置窗口管理器(wm)</title>
-    <link>https://flyleon.github.io/wm/</link>
-    <pubDate>Sat, 06 Feb 2021 21:29:02 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/wm/</guid>
-    <description><![CDATA[最近试试在archlinux下使用titling窗口管理器，包括大名鼎鼎的i3、bspwm、dwm、qtile和xmonad，发现打开了新世]]></description>
 </item></channel>
 </rss>
