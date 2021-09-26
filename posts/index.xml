@@ -3,7 +3,14 @@
         <title>所有文章 - 我的自留地</title>
         <link>https://flyleon.github.io/posts/</link>
         <description>所有文章 | 我的自留地</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 07 Jul 2021 08:50:20 &#43;0800</lastBuildDate><atom:link href="https://flyleon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 26 Sep 2021 15:52:48 &#43;0800</lastBuildDate><atom:link href="https://flyleon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>声音-《德鲁克-怀师恩》</title>
+    <link>https://flyleon.github.io/teacher/</link>
+    <pubDate>Sun, 26 Sep 2021 15:52:48 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/teacher/</guid>
+    <description><![CDATA[选自《旁观者：管理大师德鲁克回忆录》，豆瓣评分8.9，简体中文版畅销20年！反映当时社会的面貌，捕捉并传达那一代人难以想像的神髓、韵味与感觉]]></description>
+</item><item>
     <title>声音--《民族主义》</title>
     <link>https://flyleon.github.io/natian/</link>
     <pubDate>Wed, 07 Jul 2021 08:50:20 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://flyleon.github.io/debian/</guid>
     <description><![CDATA[笔记本一直使用archlinux，但有很长时间未更新，更新后挂了，于是想试试号称最稳定的debian。但网上如何桌面使用的文章很少。以下是我]]></description>
-</item><item>
-    <title>Thinkpad T400上安装配置Freebsd 12</title>
-    <link>https://flyleon.github.io/freebsd/</link>
-    <pubDate>Wed, 24 Feb 2021 11:47:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/freebsd/</guid>
-    <description><![CDATA[最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文]]></description>
 </item></channel>
 </rss>
