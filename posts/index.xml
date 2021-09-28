@@ -3,8 +3,15 @@
         <title>所有文章 - 我的自留地</title>
         <link>https://flyleon.github.io/posts/</link>
         <description>所有文章 | 我的自留地</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 26 Sep 2021 15:52:48 &#43;0800</lastBuildDate><atom:link href="https://flyleon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>声音-《德鲁克-怀师恩》</title>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 26 Sep 2021 17:40:31 &#43;0800</lastBuildDate><atom:link href="https://flyleon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>声音--《卓别林：大独裁者》</title>
+    <link>https://flyleon.github.io/speech/</link>
+    <pubDate>Sun, 26 Sep 2021 17:40:31 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/speech/</guid>
+    <description><![CDATA[影片讲述第一次世界大战，托曼尼亚王国独裁者辛格尔（查理·卓别林饰）上台。他的大肆扩张导致战乱不断民不聊生。并且他大搞阴谋政策，煽动民众对犹太]]></description>
+</item><item>
+    <title>声音--《德鲁克-怀师恩》</title>
     <link>https://flyleon.github.io/teacher/</link>
     <pubDate>Sun, 26 Sep 2021 15:52:48 &#43;0800</pubDate>
     <author>作者</author>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://flyleon.github.io/bluetooth/</guid>
     <description><![CDATA[我在TkinkPad X1上同时安装了windows、Archlinux和Big Sur，三个系统可共用蓝牙耳机。首先在三个系统分别连接蓝牙耳机]]></description>
-</item><item>
-    <title>Debian桌面使用安装配置</title>
-    <link>https://flyleon.github.io/debian/</link>
-    <pubDate>Tue, 16 Mar 2021 08:42:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/debian/</guid>
-    <description><![CDATA[笔记本一直使用archlinux，但有很长时间未更新，更新后挂了，于是想试试号称最稳定的debian。但网上如何桌面使用的文章很少。以下是我]]></description>
 </item></channel>
 </rss>
