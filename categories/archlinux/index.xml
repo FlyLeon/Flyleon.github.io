@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>archlinux - 分类 - 我的自留地</title>
+        <link>https://flyleon.github.io/categories/archlinux/</link>
+        <description>archlinux - 分类 - 我的自留地</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 29 Sep 2021 15:13:42 &#43;0800</lastBuildDate><atom:link href="https://flyleon.github.io/categories/archlinux/" rel="self" type="application/rss+xml" /><item>
+    <title>Gpg 使用教程</title>
+    <link>https://flyleon.github.io/gpg/</link>
+    <pubDate>Wed, 29 Sep 2021 15:13:42 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/gpg/</guid>
+    <description><![CDATA[GGP（英语：Pretty Good Privacy，直译：优良保密协议）是一套用于讯息加密、验证的应用程式。 PGP的主要开发者是菲尔·齐默曼。齐默曼]]></description>
+</item><item>
+    <title>GPGME  errors on archlinux</title>
+    <link>https://flyleon.github.io/gpgerrors/</link>
+    <pubDate>Wed, 29 Sep 2021 15:06:19 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/gpgerrors/</guid>
+    <description><![CDATA[问题： 1 2 3 4 sudo pacman -Syyu error: GPGME error: 无数据 error: GPGME error: 无数据 error: GPGME error: 无数据 Delete: 1 sudo rm /var/lib/pacman/sync/*db.sig* Then: 1 2 3 4 5 6 7 sudo pacman-key --init sudo pacman-key --populate archlinux sudo pacman -Syy sudo pacman -Syyu Done!]]></description>
+</item></channel>
+</rss>
