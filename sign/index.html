@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>安卓程序签名 - 我的自留地</title><meta name="Description" content="我的自留地"><meta property="og:title" content="安卓程序签名" />
-<meta property="og:description" content="下面讲的是如何为我们的删除现有Apk签名并重新签名，我们后续的教程使用的是&rsquo;Uber Apk Signer&#39;。 去除签名 将后缀apk改为z" />
+<meta property="og:description" content="下面讲的是如何为我们的删除现有Apk签名并重新签名，我们后续的教程使用的是Uber Apk Signer。 去除签名 将后缀apk改为zip 删除签名 删除" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/sign/" /><meta property="og:image" content="https://flyleon.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-11T14:56:35&#43;08:00" />
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
 
 <meta name="twitter:title" content="安卓程序签名"/>
-<meta name="twitter:description" content="下面讲的是如何为我们的删除现有Apk签名并重新签名，我们后续的教程使用的是&rsquo;Uber Apk Signer&#39;。 去除签名 将后缀apk改为z"/>
+<meta name="twitter:description" content="下面讲的是如何为我们的删除现有Apk签名并重新签名，我们后续的教程使用的是Uber Apk Signer。 去除签名 将后缀apk改为zip 删除签名 删除"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/sign\/"
-        },"genre": "posts","keywords": "sign","wordcount":  182 ,
+        },"genre": "posts","keywords": "sign","wordcount":  140 ,
         "url": "https:\/\/flyleon.github.io\/sign\/","datePublished": "2021-10-11T14:56:35+08:00","dateModified": "2021-10-11T14:56:35+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">安卓程序签名</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AE%89%E5%8D%93/"><i class="far fa-folder fa-fw"></i>安卓</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-11">2021-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 182 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-11">2021-10-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 140 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -131,28 +131,28 @@
   <ul>
     <li><a href="#去除签名">去除签名</a></li>
     <li><a href="#生成自签名">生成自签名</a></li>
-    <li><a href="#下载uber-apk-signer">下载&rsquo;Uber Apk Signer'</a></li>
+    <li><a href="#下载uber-apk-signer">下载<code>Uber Apk Signer</code></a></li>
     <li><a href="#自签名">自签名</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
-<p>下面讲的是如何为我们的删除现有Apk签名并重新签名，我们后续的教程使用的是&rsquo;Uber Apk Signer'。</p>
+<p>下面讲的是如何为我们的删除现有Apk签名并重新签名，我们后续的教程使用的是<code>Uber Apk Signer</code>。</p>
 </blockquote>
 <h2 id="去除签名">去除签名</h2>
 <ul>
 <li>将后缀apk改为zip</li>
 <li>删除签名</li>
 </ul>
-<p>删除目录中&rsquo;META_INF&quot;目录除&rsquo;MAIFEST.MF&rsquo;文件。</p>
+<p>删除目录中<code>META_INF</code>目录除<code>MAIFEST.MF</code>文件。</p>
 <ul>
 <li>改回后缀</li>
 </ul>
 <h2 id="生成自签名">生成自签名</h2>
-<p>&lsquo;keytool -genkey -alias my_alias -keyalg RSA -validity 20000 -keystore /path/yuorrname.keystore&rsquo;</p>
-<h2 id="下载uber-apk-signer">下载&rsquo;Uber Apk Signer'</h2>
-<p>&lsquo;git clone &ndash;depth=1 <a href="https://github.com/patrickfav/uber-apk-signer.git'">https://github.com/patrickfav/uber-apk-signer.git'</a></p>
+<p><code>keytool -genkey -alias my_alias -keyalg RSA -validity 20000 -keystore /path/yuorrname.keystore</code></p>
+<h2 id="下载uber-apk-signer">下载<code>Uber Apk Signer</code></h2>
+<p><code>git clone --depth=1 https://github.com/patrickfav/uber-apk-signer.git</code></p>
 <h2 id="自签名">自签名</h2>
-<p>&lsquo;java -jar uber-apk-signer.jar -a /path/to/apks &ndash;ks /path/yourname.keystore&rsquo; &ndash;ksAlias my_alias&rsquo;</p>
+<p><code>java -jar uber-apk-signer.jar -a /path/to/apks --ks /path/yourname.keystore' --ksAlias my_alias</code></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
