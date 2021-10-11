@@ -3,7 +3,14 @@
         <title>所有文章 - 我的自留地</title>
         <link>https://flyleon.github.io/posts/</link>
         <description>所有文章 | 我的自留地</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 11 Oct 2021 11:46:38 &#43;0800</lastBuildDate><atom:link href="https://flyleon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 11 Oct 2021 14:56:35 &#43;0800</lastBuildDate><atom:link href="https://flyleon.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>安卓程序签名</title>
+    <link>https://flyleon.github.io/sign/</link>
+    <pubDate>Mon, 11 Oct 2021 14:56:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/sign/</guid>
+    <description><![CDATA[下面讲的是如何为我们的删除现有Apk签名并重新签名！我们后续的教程使用的是&rsquo;Uber Apk Signer，所以本闻讲解的是使用&rsq]]></description>
+</item><item>
     <title>声音：《胡适——介绍我的思想》“</title>
     <link>https://flyleon.github.io/think/</link>
     <pubDate>Mon, 11 Oct 2021 11:46:38 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://flyleon.github.io/natian/</guid>
     <description><![CDATA[民族主义视频]]></description>
-</item><item>
-    <title>声音：《邓晓芒——苏格拉底与孔子的言说方式比较》</title>
-    <link>https://flyleon.github.io/suge/</link>
-    <pubDate>Tue, 06 Jul 2021 08:38:12 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/suge/</guid>
-    <description><![CDATA[[内容提要] 节选《中西文化比较十一讲》。本文通过对古希腊苏格拉底的对话与孔子的《论语》在言说方式(logos)上的比较，证明苏格拉底的对话把]]></description>
 </item></channel>
 </rss>
