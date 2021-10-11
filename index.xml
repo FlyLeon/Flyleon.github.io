@@ -3,9 +3,16 @@
         <title>我的自留地</title>
         <link>https://flyleon.github.io/</link>
         <description>我的自留地</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 11 Oct 2021 10:44:25 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 11 Oct 2021 11:46:38 &#43;0800</lastBuildDate>
             <atom:link href="https://flyleon.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>声音：《胡适——介绍我的思想》“</title>
+    <link>https://flyleon.github.io/think/</link>
+    <pubDate>Mon, 11 Oct 2021 11:46:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://flyleon.github.io/think/</guid>
+    <description><![CDATA[“现在有人对你们说：“牺牲你们个人的自由，去求国家的自由！”我对你们说：“争你们个人的自由，便是为国家争自由！争你们自己的人格，便是为国家争]]></description>
+</item><item>
     <title>声音：《胡适——容忍比自由更重要》</title>
     <link>https://flyleon.github.io/man/</link>
     <pubDate>Mon, 11 Oct 2021 10:44:25 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://flyleon.github.io/suge/</guid>
     <description><![CDATA[[内容提要] 节选《中西文化比较十一讲》。本文通过对古希腊苏格拉底的对话与孔子的《论语》在言说方式(logos)上的比较，证明苏格拉底的对话把]]></description>
-</item><item>
-    <title>读书：《漫步华尔街》</title>
-    <link>https://flyleon.github.io/manbuhuxerjie/</link>
-    <pubDate>Wed, 07 Apr 2021 14:16:12 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://flyleon.github.io/manbuhuxerjie/</guid>
-    <description><![CDATA[随机漫步理论 ，磐石与空中阁楼，都需要考虑 股价预测理论： 有效市场，技术分析和基本面分析都无法预测未来走势。 长期 分散的资产配置（指数基金+货币基]]></description>
 </item></channel>
 </rss>
