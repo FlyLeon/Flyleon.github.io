@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/bluetooth\/"
-        },"genre": "posts","keywords": "bluetooth\u0022","wordcount":  400 ,
+        },"genre": "posts","keywords": "bluetooth\u0022","wordcount":  520 ,
         "url": "https:\/\/flyleon.github.io\/bluetooth\/","datePublished": "2021-03-16T09:43:29+08:00","dateModified": "2021-03-16T09:43:29+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,8 +120,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Big sur、windows10、archlinux三系统配置Bluetooth</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linuxwindowsmac/"><i class="far fa-folder fa-fw"></i>linux,windows,mac</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-16">2021-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 400 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-16">2021-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 520 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -132,17 +132,29 @@
 <p>我在<code>TkinkPad X1</code>上同时安装了<code>windows</code>、<code>Archlinux</code>和<code>Big Sur</code>，三个系统可共用蓝牙耳机。首先在三个系统分别连接蓝牙耳机，其次在 <code>Big Sur</code>中导出连接消息，查看连接密码。再次修改<code>windows</code>和<code>Archlinux</code>连接密码。注意<code>windows</code>和<code>Archlinux</code>连接密码<code>Big Sur</code>连接密码从后向前每两位为一组颠倒，同时<code>Archlinux</code>的连接密码字母需大写。</p>
 </blockquote>
 <ul>
-<li>蓝牙耳机配对<code>windows</code></li>
-<li>蓝牙耳机配对<code>MAC</code>
-<code>sudo defaults read /private/var/root/Library/Preferences/com.apple.bluetoothd.plist LinkKeys &gt; bt</code></li>
-<li>蓝牙耳机配对<code>linux</code></li>
-<li>修改<code>winodows</code>蓝牙连接
-使用管理员权限运行<code>regedit</code>。
-打开<code>ControlSet001\Services\BTHPORT\Parameters\你的蓝牙mac地址</code></li>
-<li>修改<code>linux</code>蓝牙连接
-使用<code>su</code>进入超级用户。
-进入<code>cd /var/lib/bluetooth/你的蓝牙mac地址</code>，<code>vim info</code>。
-修改<code>LinkKey</code>下<code>key</code>。</li>
+<li>蓝牙耳机分别配对<code>windows</code>、<code>archlinx</code>和<code>windows</code></li>
+<li><code>MAC</code>中首先导出蓝牙配对密钥</li>
+</ul>
+<ul>
+<li>下载<code>hacktool</code>;</li>
+<li>使用<code>hacktool</code>-<code>工具</code>-<code>蓝牙</code>导出蓝牙配对信息，找到配对密钥。</li>
+</ul>
+<ul>
+<li>修改<code>winodows</code>中蓝牙配对密钥</li>
+</ul>
+<ul>
+<li>以管理员权限打开cmd；</li>
+<li>使用管理员权限运行<code>regedit</code>。运行<code>psexec -si regedit</code>;
+打开<code>ControlSet001\Services\BTHPORT\Parameters\你的蓝牙mac地址</code>下蓝牙密钥与`mac\下一致，注意字母要大写。</li>
+</ul>
+<ul>
+<li>修改<code>linux</code>中蓝牙配对密钥</li>
+</ul>
+<ul>
+<li>使用<code>su</code>进入超级用户。</li>
+<li>进入<code>cd /var/lib/bluetooth/你的蓝牙mac地址</code>，</li>
+<li>编辑<code>vim info</code>。
+修改<code>LinkKey</code>下<code>key</code>与mac中一致，密钥大写，顺序不要改。</li>
 </ul>
 <p>参考<a href="https://wiki.archlinux.org/index.php/Bluetooth" target="_blank" rel="noopener noreffer">Archlinux Wiki</a></p>
 </div><div class="post-footer" id="post-footer">
@@ -178,7 +190,7 @@
             </noscript></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">flyleon</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">flyleon</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
