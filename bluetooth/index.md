@@ -6,7 +6,7 @@
 * 下载`hacktool`;
 *  使用`hacktool`-`工具`-`蓝牙`导出蓝牙配对信息，找到配对密钥。
 - 修改`winodows`中蓝牙配对密钥
-* 以管理员权限打开cmd；
+* 以管理员权限打开`cmd`；
 * 使用管理员权限运行`regedit`。运行`psexec -si regedit`;
 打开`ControlSet001\Services\BTHPORT\Parameters\你的蓝牙mac地址`下蓝牙密钥与`mac\下一致，注意字母要大写。
 - 修改`linux`中蓝牙配对密钥
