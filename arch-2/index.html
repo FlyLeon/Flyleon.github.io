@@ -9,8 +9,8 @@
 <meta property="og:description" content="archlinux 安装配置的文章网上很多，大多涉及源设置，输入法，字体美化，终端设置等等，但仍有很多细节缺失，为此将自己完善Thinkpad X1 carbon 7th 的过程简要" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/arch-2/" /><meta property="og:image" content="https://flyleon.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-10-22T10:19:52&#43;08:00" />
-<meta property="article:modified_time" content="2020-10-22T10:19:52&#43;08:00" />
+<meta property="article:published_time" content="2020-10-22T10:19:52+08:00" />
+<meta property="article:modified_time" content="2020-10-22T10:19:52+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
@@ -166,7 +166,7 @@
 <p>编辑 ~/.config/pulse/daemon.conf</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -181,77 +181,77 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">     default-sample-format = float32le
-     default-sample-rate = 48000
-     alternate-sample-rate = 44100
-     default-sample-channels = 4
-     default-channel-map = front-left,front-right,rear-left,rear-right
-     resample-method = soxr-vhq
-     enable-lfe-remixing = no
-     high-priority = yes
-     nice-level = -11
-     realtime-scheduling = yes
-     realtime-priority = 9
-     rlimit-rtprio = 9
-     daemonize = no
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">     default-sample-format = float32le
+</span></span><span class="line"><span class="cl">     default-sample-rate = 48000
+</span></span><span class="line"><span class="cl">     alternate-sample-rate = 44100
+</span></span><span class="line"><span class="cl">     default-sample-channels = 4
+</span></span><span class="line"><span class="cl">     default-channel-map = front-left,front-right,rear-left,rear-right
+</span></span><span class="line"><span class="cl">     resample-method = soxr-vhq
+</span></span><span class="line"><span class="cl">     enable-lfe-remixing = no
+</span></span><span class="line"><span class="cl">     high-priority = yes
+</span></span><span class="line"><span class="cl">     nice-level = -11
+</span></span><span class="line"><span class="cl">     realtime-scheduling = yes
+</span></span><span class="line"><span class="cl">     realtime-priority = 9
+</span></span><span class="line"><span class="cl">     rlimit-rtprio = 9
+</span></span><span class="line"><span class="cl">     daemonize = no
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="设置alsa">设置ALSA</h3>
 <p>编辑 ~/.asoundrc</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">     pcm!default {
-     type plug
-     slave.pcm hw   
-    }
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">     pcm!default {
+</span></span><span class="line"><span class="cl">     type plug
+</span></span><span class="line"><span class="cl">     slave.pcm hw   
+</span></span><span class="line"><span class="cl">    }
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="ssd开启trim">SSD开启trim</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo systemctl enable fstrim.timer
-sudo systemctl start fstrim.service
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo systemctl enable fstrim.timer
+</span></span><span class="line"><span class="cl">sudo systemctl start fstrim.service
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="升级固件版本">升级固件版本</h2>
 <p>安装fwupd</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo fwupdmgr update
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo fwupdmgr update
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="boss-q35-蓝牙连接">BOSS Q35 蓝牙连接</h2>
 <h3 id="设置">设置</h3>
 <p>编辑 vim /etc/bluetooth/main.conf</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># ControllerMode = dual改为ControllerMode = bredr，重启bluetooth服务。
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># ControllerMode = dual改为ControllerMode = bredr，重启bluetooth服务。
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="音质提升-1">音质提升</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pacmd set-card-profile 1 a2dp_sink
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pacmd set-card-profile 1 a2dp_sink
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="dock">dock</h2>
 <p>安装plank，将状态栏放于顶部</p>
@@ -289,7 +289,7 @@ sudo systemctl start fstrim.service
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">flyleon</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

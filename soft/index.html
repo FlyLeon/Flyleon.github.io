@@ -9,8 +9,8 @@
 <meta property="og:description" content="安装完系统后，你还需要安装基本的软件来方便使用。好在linux下软件众多，得益于开放性和自由免费的理念，你有众多选择，总可以选择适合你的。下" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/soft/" /><meta property="og:image" content="https://flyleon.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-11-01T14:49:57&#43;08:00" />
-<meta property="article:modified_time" content="2020-11-01T14:49:57&#43;08:00" />
+<meta property="article:published_time" content="2020-11-01T14:49:57+08:00" />
+<meta property="article:modified_time" content="2020-11-01T14:49:57+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
@@ -173,11 +173,11 @@ oh-my-fish是fish功能拓展，<code>curl -L https://get.oh-my.fish | fish</cod
             <div class="admonition-content"><p>更换缺省shell</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">chsh /usr/bin/fish
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">chsh /usr/bin/fish
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
@@ -199,7 +199,7 @@ oh-my-fish是fish功能拓展，<code>curl -L https://get.oh-my.fish | fish</cod
 <p>.config/vim/init.vim</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -256,62 +256,62 @@ oh-my-fish是fish功能拓展，<code>curl -L https://get.oh-my.fish | fish</cod
 </span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">call plug#begin(&#39;~/.local/share/nvim/plugged&#39;)
-Plug &#39;vim-airline/vim-airline&#39;
-&#34; Plug &#39;scrooloose/nerdtree&#39;
-Plug &#39;scrooloose/nerdtree&#39;
-Plug &#39;morhetz/gruvbox&#39;
-Plug &#39;dracula/vim&#39;, { &#39;as&#39;: &#39;dracula&#39; }
-call plug#end()
-&#34;colorscheme gruvbox
-colorscheme dracula
-
-&#34; autocmd vimenter * NERDTree  &#34;自动开启Nerdtree
-let g:NERDTreeWinSize = 25 &#34;设定 NERDTree 视窗大小
-let NERDTreeShowBookmarks=1  &#34; 开启Nerdtree时自动显示Bookmarks
-&#34; 打开vim时如果没有文件自动打开NERDTree
-&#34; autocmd vimenter * if !argc()|NERDTree|endif
-&#34; 当NERDTree为剩下的唯一窗口时自动关闭
-autocmd bufenter * if (winnr(&#34;$&#34;) == 1 &amp;&amp; exists(&#34;b:NERDTree&#34;) &amp;&amp; b:NERDTree.isTabTree()) | q | endif
-&#34; 设置树的显示图标
-let g:NERDTreeDirArrowExpandable = &#39;+&#39;
-let g:NERDTreeDirArrowCollapsible = &#39;-&#39;
-let NERDTreeIgnore = [&#39;\.pyc$&#39;]  &#34; 过滤所有.pyc文件不显示
-let g:NERDTreeShowLineNumbers=0 &#34; 是否显示行号
-let g:NERDTreeHidden=0     &#34;不显示隐藏文件
-&#34;&#34;Making it prettier
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-nnoremap &lt;F3&gt; :NERDTreeToggle&lt;CR&gt; &#34; 开启/关闭nerdtree快捷键
-
-&#34; set number 
-set termguicolors
-set background=dark
-highlight Normal guibg=NONE ctermbg=None
-
-&#34; autocmd vimenter * NERDTree  &#34;自动开启Nerdtree
-let g:NERDTreeWinSize = 25 &#34;设定 NERDTree 视窗大小
-let NERDTreeShowBookmarks=1  &#34; 开启Nerdtree时自动显示Bookmarks
-&#34;打开vim时如果没有文件自动打开NERDTree
-&#34; autocmd vimenter * if !argc()|NERDTree|endif
-&#34;当NERDTree为剩下的唯一窗口时自动关闭
-autocmd bufenter * if (winnr(&#34;$&#34;) == 1 &amp;&amp; exists(&#34;b:NERDTree&#34;) &amp;&amp; b:NERDTree.isTabTree()) | q | endif
-&#34; 设置树的显示图标
-let g:NERDTreeDirArrowExpandable = &#39;+&#39;
-let g:NERDTreeDirArrowCollapsible = &#39;-&#39;
-let NERDTreeIgnore = [&#39;\.pyc$&#39;]  &#34; 过滤所有.pyc文件不显示
-let g:NERDTreeShowLineNumbers=0 &#34; 是否显示行号
-let g:NERDTreeHidden=0     &#34;不显示隐藏文件
-&#34;&#34;Making it prettier
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-nnoremap &lt;F3&gt; :NERDTreeToggle&lt;CR&gt; &#34; 开启/关闭nerdtree快捷键
-
-&#34; set number 
-set termguicolors
-set background=dark
-highlight Normal guibg=NONE ctermbg=None
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">call plug#begin(&#39;~/.local/share/nvim/plugged&#39;)
+</span></span><span class="line"><span class="cl">Plug &#39;vim-airline/vim-airline&#39;
+</span></span><span class="line"><span class="cl">&#34; Plug &#39;scrooloose/nerdtree&#39;
+</span></span><span class="line"><span class="cl">Plug &#39;scrooloose/nerdtree&#39;
+</span></span><span class="line"><span class="cl">Plug &#39;morhetz/gruvbox&#39;
+</span></span><span class="line"><span class="cl">Plug &#39;dracula/vim&#39;, { &#39;as&#39;: &#39;dracula&#39; }
+</span></span><span class="line"><span class="cl">call plug#end()
+</span></span><span class="line"><span class="cl">&#34;colorscheme gruvbox
+</span></span><span class="line"><span class="cl">colorscheme dracula
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34; autocmd vimenter * NERDTree  &#34;自动开启Nerdtree
+</span></span><span class="line"><span class="cl">let g:NERDTreeWinSize = 25 &#34;设定 NERDTree 视窗大小
+</span></span><span class="line"><span class="cl">let NERDTreeShowBookmarks=1  &#34; 开启Nerdtree时自动显示Bookmarks
+</span></span><span class="line"><span class="cl">&#34; 打开vim时如果没有文件自动打开NERDTree
+</span></span><span class="line"><span class="cl">&#34; autocmd vimenter * if !argc()|NERDTree|endif
+</span></span><span class="line"><span class="cl">&#34; 当NERDTree为剩下的唯一窗口时自动关闭
+</span></span><span class="line"><span class="cl">autocmd bufenter * if (winnr(&#34;$&#34;) == 1 &amp;&amp; exists(&#34;b:NERDTree&#34;) &amp;&amp; b:NERDTree.isTabTree()) | q | endif
+</span></span><span class="line"><span class="cl">&#34; 设置树的显示图标
+</span></span><span class="line"><span class="cl">let g:NERDTreeDirArrowExpandable = &#39;+&#39;
+</span></span><span class="line"><span class="cl">let g:NERDTreeDirArrowCollapsible = &#39;-&#39;
+</span></span><span class="line"><span class="cl">let NERDTreeIgnore = [&#39;\.pyc$&#39;]  &#34; 过滤所有.pyc文件不显示
+</span></span><span class="line"><span class="cl">let g:NERDTreeShowLineNumbers=0 &#34; 是否显示行号
+</span></span><span class="line"><span class="cl">let g:NERDTreeHidden=0     &#34;不显示隐藏文件
+</span></span><span class="line"><span class="cl">&#34;&#34;Making it prettier
+</span></span><span class="line"><span class="cl">let NERDTreeMinimalUI = 1
+</span></span><span class="line"><span class="cl">let NERDTreeDirArrows = 1
+</span></span><span class="line"><span class="cl">nnoremap &lt;F3&gt; :NERDTreeToggle&lt;CR&gt; &#34; 开启/关闭nerdtree快捷键
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34; set number 
+</span></span><span class="line"><span class="cl">set termguicolors
+</span></span><span class="line"><span class="cl">set background=dark
+</span></span><span class="line"><span class="cl">highlight Normal guibg=NONE ctermbg=None
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34; autocmd vimenter * NERDTree  &#34;自动开启Nerdtree
+</span></span><span class="line"><span class="cl">let g:NERDTreeWinSize = 25 &#34;设定 NERDTree 视窗大小
+</span></span><span class="line"><span class="cl">let NERDTreeShowBookmarks=1  &#34; 开启Nerdtree时自动显示Bookmarks
+</span></span><span class="line"><span class="cl">&#34;打开vim时如果没有文件自动打开NERDTree
+</span></span><span class="line"><span class="cl">&#34; autocmd vimenter * if !argc()|NERDTree|endif
+</span></span><span class="line"><span class="cl">&#34;当NERDTree为剩下的唯一窗口时自动关闭
+</span></span><span class="line"><span class="cl">autocmd bufenter * if (winnr(&#34;$&#34;) == 1 &amp;&amp; exists(&#34;b:NERDTree&#34;) &amp;&amp; b:NERDTree.isTabTree()) | q | endif
+</span></span><span class="line"><span class="cl">&#34; 设置树的显示图标
+</span></span><span class="line"><span class="cl">let g:NERDTreeDirArrowExpandable = &#39;+&#39;
+</span></span><span class="line"><span class="cl">let g:NERDTreeDirArrowCollapsible = &#39;-&#39;
+</span></span><span class="line"><span class="cl">let NERDTreeIgnore = [&#39;\.pyc$&#39;]  &#34; 过滤所有.pyc文件不显示
+</span></span><span class="line"><span class="cl">let g:NERDTreeShowLineNumbers=0 &#34; 是否显示行号
+</span></span><span class="line"><span class="cl">let g:NERDTreeHidden=0     &#34;不显示隐藏文件
+</span></span><span class="line"><span class="cl">&#34;&#34;Making it prettier
+</span></span><span class="line"><span class="cl">let NERDTreeMinimalUI = 1
+</span></span><span class="line"><span class="cl">let NERDTreeDirArrows = 1
+</span></span><span class="line"><span class="cl">nnoremap &lt;F3&gt; :NERDTreeToggle&lt;CR&gt; &#34; 开启/关闭nerdtree快捷键
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34; set number 
+</span></span><span class="line"><span class="cl">set termguicolors
+</span></span><span class="line"><span class="cl">set background=dark
+</span></span><span class="line"><span class="cl">highlight Normal guibg=NONE ctermbg=None
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="配色">配色</h2>
 <p>可以为fish，kitty，neovim均安装使用流行的dracula配色，这方面搜索dracula网站即可，说明很详细。
@@ -331,7 +331,7 @@ highlight Normal guibg=NONE ctermbg=None
 <p>编辑<code>/etc/filebrowser/filebrowser.json</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -351,25 +351,25 @@ highlight Normal guibg=NONE ctermbg=None
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">  &#34;port&#34;: 7000,
-  &#34;noAuth&#34;: false,
-  &#34;baseurl&#34;:&#34;/&#34;,
-  &#34;address&#34;: &#34;204.15.72.113&#34;,
-  &#34;alternativeReCaptcha&#34;: false,
-  &#34;reCaptchaKey&#34;: &#34;&#34;,
-  &#34;reCaptchaSecret&#34;: &#34;&#34;,
-  &#34;database&#34;: &#34;/etc/filebrowser/filebrowser.db&#34;,
-  &#34;log&#34;: &#34;stdout&#34;,
-  &#34;plugin&#34;: &#34;&#34;,
-  &#34;scope&#34;: &#34;.&#34;,
-  &#34;allowCommands&#34;: true,
-  &#34;allowEdit&#34;: true,
-  &#34;allowNew&#34;: true,
-  &#34;commands&#34;: [
-    &#34;wget&#34;
-  ]
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  &#34;port&#34;: 7000,
+</span></span><span class="line"><span class="cl">  &#34;noAuth&#34;: false,
+</span></span><span class="line"><span class="cl">  &#34;baseurl&#34;:&#34;/&#34;,
+</span></span><span class="line"><span class="cl">  &#34;address&#34;: &#34;204.15.72.113&#34;,
+</span></span><span class="line"><span class="cl">  &#34;alternativeReCaptcha&#34;: false,
+</span></span><span class="line"><span class="cl">  &#34;reCaptchaKey&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">  &#34;reCaptchaSecret&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">  &#34;database&#34;: &#34;/etc/filebrowser/filebrowser.db&#34;,
+</span></span><span class="line"><span class="cl">  &#34;log&#34;: &#34;stdout&#34;,
+</span></span><span class="line"><span class="cl">  &#34;plugin&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">  &#34;scope&#34;: &#34;.&#34;,
+</span></span><span class="line"><span class="cl">  &#34;allowCommands&#34;: true,
+</span></span><span class="line"><span class="cl">  &#34;allowEdit&#34;: true,
+</span></span><span class="line"><span class="cl">  &#34;allowNew&#34;: true,
+</span></span><span class="line"><span class="cl">  &#34;commands&#34;: [
+</span></span><span class="line"><span class="cl">    &#34;wget&#34;
+</span></span><span class="line"><span class="cl">  ]
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>自启动</li>
@@ -377,7 +377,7 @@ highlight Normal guibg=NONE ctermbg=None
 <p>编辑<code>/etc/systemd/system/filebrowser.service</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -391,19 +391,19 @@ highlight Normal guibg=NONE ctermbg=None
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Unit]
-Description=The filebrowser Process Manager
-After=network.target
-
-[Service]
-Type=simple
-ExecStart=/usr/local/bin/filebrowser -c /etc/filebrowser/filebrowser.json
-ExecStop=/bin/killall filebrowser
-PrivateTmp=true
-
-[Install]
-WantedBy=multi-user.target
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Unit]
+</span></span><span class="line"><span class="cl">Description=The filebrowser Process Manager
+</span></span><span class="line"><span class="cl">After=network.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Service]
+</span></span><span class="line"><span class="cl">Type=simple
+</span></span><span class="line"><span class="cl">ExecStart=/usr/local/bin/filebrowser -c /etc/filebrowser/filebrowser.json
+</span></span><span class="line"><span class="cl">ExecStop=/bin/killall filebrowser
+</span></span><span class="line"><span class="cl">PrivateTmp=true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Install]
+</span></span><span class="line"><span class="cl">WantedBy=multi-user.target
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>文件目录根设置</li>
@@ -417,7 +417,7 @@ WantedBy=multi-user.target
 <p>编辑<code>/etc/systemd/system/frps.service</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -432,20 +432,20 @@ WantedBy=multi-user.target
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Unit]
-Description=Frp Server Service
-After=network.target
-
-[Service]
-Type=simple
-User=nobody
-Restart=on-failure
-RestartSec=5s
-ExecStart=/usr/bin/frps -c /etc/frps/frps.ini
-
-[Install]
-WantedBy=multi-user.target
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Unit]
+</span></span><span class="line"><span class="cl">Description=Frp Server Service
+</span></span><span class="line"><span class="cl">After=network.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Service]
+</span></span><span class="line"><span class="cl">Type=simple
+</span></span><span class="line"><span class="cl">User=nobody
+</span></span><span class="line"><span class="cl">Restart=on-failure
+</span></span><span class="line"><span class="cl">RestartSec=5s
+</span></span><span class="line"><span class="cl">ExecStart=/usr/bin/frps -c /etc/frps/frps.ini
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[Install]
+</span></span><span class="line"><span class="cl">WantedBy=multi-user.target
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>设置</li>
@@ -453,7 +453,7 @@ WantedBy=multi-user.target
 <p>编辑<code>/etc/frps/frps.ini</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -489,41 +489,41 @@ WantedBy=multi-user.target
 </span><span class="lnt">34
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># [common] is integral section
-[common]
-# A literal address or host name for IPv6 must be enclosed
-# in square brackets, as in &#34;[::1]:80&#34;, &#34;[ipv6-host]:http&#34; or &#34;[ipv6-host%zone]:80&#34;
-bind_addr = 0.0.0.0
-bind_port = 5500
-# udp port to help make udp hole to penetrate nat
-#bind_udp_port =
-# udp port used for kcp protocol, it can be same with &#39;bind_port&#39;
-# if not set, kcp is disabled in frps
-#kcp_bind_port =
-# specify which address proxy will listen for, default value is same with bind_addr
-# proxy_bind_addr = 127.0.0.1
-# if you want to support virtual host, you must set the http port for listening (optional)
-# Note: http port and https port can be same with bind_port
-vhost_http_port = 8080
-vhost_https_port = 4433
-# set dashboard_addr and dashboard_port to view dashboard of frps
-# dashboard_addr&#39;s default value is same with bind_addr
-# dashboard is available only if dashboard_port is set
-dashboard_addr = 0.0.0.0
-dashboard_port = 6443
-# dashboard user and passwd for basic auth protect, if not set, both default value is admin
-dashboard_user = 
-dashboard_pwd = 
-# AuthenticationMethod specifies what authentication method to use authenticate frpc with frps.
-# If &#34;token&#34; is specified - token will be read into login message.
-# If &#34;oidc&#34; is specified - OIDC (Open ID Connect) token will be issued using OIDC settings. By default, this value is &#34;token&#34;.
-authentication_method = token
-# auth token
-token = 
-# if subdomain_host is not empty, you can set subdomain when type is http or https in frpc&#39;s configure file
-# when subdomain is test, the host used by routing is test.frps.com
-subdomain_host = frps.com
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># [common] is integral section
+</span></span><span class="line"><span class="cl">[common]
+</span></span><span class="line"><span class="cl"># A literal address or host name for IPv6 must be enclosed
+</span></span><span class="line"><span class="cl"># in square brackets, as in &#34;[::1]:80&#34;, &#34;[ipv6-host]:http&#34; or &#34;[ipv6-host%zone]:80&#34;
+</span></span><span class="line"><span class="cl">bind_addr = 0.0.0.0
+</span></span><span class="line"><span class="cl">bind_port = 5500
+</span></span><span class="line"><span class="cl"># udp port to help make udp hole to penetrate nat
+</span></span><span class="line"><span class="cl">#bind_udp_port =
+</span></span><span class="line"><span class="cl"># udp port used for kcp protocol, it can be same with &#39;bind_port&#39;
+</span></span><span class="line"><span class="cl"># if not set, kcp is disabled in frps
+</span></span><span class="line"><span class="cl">#kcp_bind_port =
+</span></span><span class="line"><span class="cl"># specify which address proxy will listen for, default value is same with bind_addr
+</span></span><span class="line"><span class="cl"># proxy_bind_addr = 127.0.0.1
+</span></span><span class="line"><span class="cl"># if you want to support virtual host, you must set the http port for listening (optional)
+</span></span><span class="line"><span class="cl"># Note: http port and https port can be same with bind_port
+</span></span><span class="line"><span class="cl">vhost_http_port = 8080
+</span></span><span class="line"><span class="cl">vhost_https_port = 4433
+</span></span><span class="line"><span class="cl"># set dashboard_addr and dashboard_port to view dashboard of frps
+</span></span><span class="line"><span class="cl"># dashboard_addr&#39;s default value is same with bind_addr
+</span></span><span class="line"><span class="cl"># dashboard is available only if dashboard_port is set
+</span></span><span class="line"><span class="cl">dashboard_addr = 0.0.0.0
+</span></span><span class="line"><span class="cl">dashboard_port = 6443
+</span></span><span class="line"><span class="cl"># dashboard user and passwd for basic auth protect, if not set, both default value is admin
+</span></span><span class="line"><span class="cl">dashboard_user = 
+</span></span><span class="line"><span class="cl">dashboard_pwd = 
+</span></span><span class="line"><span class="cl"># AuthenticationMethod specifies what authentication method to use authenticate frpc with frps.
+</span></span><span class="line"><span class="cl"># If &#34;token&#34; is specified - token will be read into login message.
+</span></span><span class="line"><span class="cl"># If &#34;oidc&#34; is specified - OIDC (Open ID Connect) token will be issued using OIDC settings. By default, this value is &#34;token&#34;.
+</span></span><span class="line"><span class="cl">authentication_method = token
+</span></span><span class="line"><span class="cl"># auth token
+</span></span><span class="line"><span class="cl">token = 
+</span></span><span class="line"><span class="cl"># if subdomain_host is not empty, you can set subdomain when type is http or https in frpc&#39;s configure file
+</span></span><span class="line"><span class="cl"># when subdomain is test, the host used by routing is test.frps.com
+</span></span><span class="line"><span class="cl">subdomain_host = frps.com
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="字体设置">字体设置</h2>
 <p>中文字体我安装了免费的文泉驿正黑、文泉驿微米黑、方正书宋;英文终端字体选择了Hack。字体大多可通过<code>yay</code>自动安装，方正书宋选择下载后手动安装。archlinux中文设置已比较成熟，我仅在chrome和urxvt中自定义了字体。chrome在设置中设置自定义字体，标准字体为方正书宋，Serif 字体为方正书宋，Sans-serif 字体为文泉驿微米黑，宽度固定的字体为文泉驿等宽微米黑。urxvt使用Hack字体，具体见urvxt设置部分。</p>
@@ -533,24 +533,24 @@ subdomain_host = frps.com
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo cp 字体.ttf /usr/share/fonts/字体.ttf
-sudo fv-cache -v -f
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo cp 字体.ttf /usr/share/fonts/字体.ttf
+</span></span><span class="line"><span class="cl">sudo fv-cache -v -f
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>查看已安装字体</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">fc-list | grep 字体名
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">fc-list | grep 字体名
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -584,7 +584,7 @@ sudo fv-cache -v -f
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">flyleon</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

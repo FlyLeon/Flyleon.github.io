@@ -9,8 +9,8 @@
 <meta property="og:description" content="nginx是常用服务器软件之一，高效，快速。我们的VPS需要它来建立网站、通过反向代理使用各种服务。从稳定性考虑，我的VPS使用Centos" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/nginx/" /><meta property="og:image" content="https://flyleon.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-10-27T17:10:45&#43;08:00" />
-<meta property="article:modified_time" content="2020-10-27T17:10:45&#43;08:00" />
+<meta property="article:published_time" content="2020-10-27T17:10:45+08:00" />
+<meta property="article:modified_time" content="2020-10-27T17:10:45+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
@@ -142,50 +142,50 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo yum install epel-release
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo yum install epel-release
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>安装nginx</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo yum install nginx
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo yum install nginx
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>启动nginx</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo systemctl start nginx
-sudo systemctl enable nginx
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo systemctl start nginx
+</span></span><span class="line"><span class="cl">sudo systemctl enable nginx
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>设置防火墙</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo firewall-cmd --permanent --zone=public --add-service=http 
-sudo firewall-cmd --permanent --zone=public --add-service=https
-sudo firewall-cmd --reload
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo firewall-cmd --permanent --zone=public --add-service=http 
+</span></span><span class="line"><span class="cl">sudo firewall-cmd --permanent --zone=public --add-service=https
+</span></span><span class="line"><span class="cl">sudo firewall-cmd --reload
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="设置nginx">设置nginx</h2>
 <ul>
@@ -193,18 +193,18 @@ sudo firewall-cmd --reload
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo nginx -t
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo nginx -t
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>filebrowser反向代理</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -224,32 +224,32 @@ sudo firewall-cmd --reload
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">resolver 8.8.8.8;
-upstream filebrowser {
-server  你的网站IP:7000;
-}
-
-server
-{
-    listen 80 default_server;
-    server_name 你的网站地址;
-
-location / {
-        client_max_body_size 1024m;
-        proxy_set_header Host            $host;
-        proxy_set_header X-Real-IP       $remote_addr;
-        proxy_set_header X-Forward-For   $proxy_add_x_forwarded_for;
-        proxy_pass http://filebrowser;
-}
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">resolver 8.8.8.8;
+</span></span><span class="line"><span class="cl">upstream filebrowser {
+</span></span><span class="line"><span class="cl">server  你的网站IP:7000;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    listen 80 default_server;
+</span></span><span class="line"><span class="cl">    server_name 你的网站地址;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">location / {
+</span></span><span class="line"><span class="cl">        client_max_body_size 1024m;
+</span></span><span class="line"><span class="cl">        proxy_set_header Host            $host;
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Real-IP       $remote_addr;
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forward-For   $proxy_add_x_forwarded_for;
+</span></span><span class="line"><span class="cl">        proxy_pass http://filebrowser;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>frps反向代理</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -288,44 +288,44 @@ location / {
 </span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">server {
-    listen 80;
-    server_name *.yourdomain.com;
-    return 301 https://$host$request_uri;
-}
-
-server {
-    listen 443 ssl http2;
-    server_name *.yourdomain.com;
-
-    ssl_certificate /usr/local/nginx/conf/ssl/yourdomain.com.crt;
-    ssl_certificate_key /usr/local/nginx/conf/ssl/yourdomain.com.key;
-
-    client_max_body_size 50m; 
-    client_body_buffer_size 256k;
-    client_header_timeout 3m;
-    client_body_timeout 3m;
-    send_timeout 3m;
-    proxy_connect_timeout 300s; 
-    proxy_read_timeout 300s; 
-    proxy_send_timeout 300s;
-    proxy_buffer_size 64k; 
-    proxy_buffers 4 32k; 
-    proxy_busy_buffers_size 64k;
-    proxy_temp_file_write_size 64k; 
-    proxy_ignore_client_abort on; 
-
-    location / {
-        proxy_pass http://127.0.0.1:1234; //frps vhost port
-        proxy_redirect off;
-        proxy_set_header Host $host:80;
-        proxy_ssl_server_name on;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">    listen 80;
+</span></span><span class="line"><span class="cl">    server_name *.yourdomain.com;
+</span></span><span class="line"><span class="cl">    return 301 https://$host$request_uri;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">    listen 443 ssl http2;
+</span></span><span class="line"><span class="cl">    server_name *.yourdomain.com;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ssl_certificate /usr/local/nginx/conf/ssl/yourdomain.com.crt;
+</span></span><span class="line"><span class="cl">    ssl_certificate_key /usr/local/nginx/conf/ssl/yourdomain.com.key;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    client_max_body_size 50m; 
+</span></span><span class="line"><span class="cl">    client_body_buffer_size 256k;
+</span></span><span class="line"><span class="cl">    client_header_timeout 3m;
+</span></span><span class="line"><span class="cl">    client_body_timeout 3m;
+</span></span><span class="line"><span class="cl">    send_timeout 3m;
+</span></span><span class="line"><span class="cl">    proxy_connect_timeout 300s; 
+</span></span><span class="line"><span class="cl">    proxy_read_timeout 300s; 
+</span></span><span class="line"><span class="cl">    proxy_send_timeout 300s;
+</span></span><span class="line"><span class="cl">    proxy_buffer_size 64k; 
+</span></span><span class="line"><span class="cl">    proxy_buffers 4 32k; 
+</span></span><span class="line"><span class="cl">    proxy_busy_buffers_size 64k;
+</span></span><span class="line"><span class="cl">    proxy_temp_file_write_size 64k; 
+</span></span><span class="line"><span class="cl">    proxy_ignore_client_abort on; 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    location / {
+</span></span><span class="line"><span class="cl">        proxy_pass http://127.0.0.1:1234; //frps vhost port
+</span></span><span class="line"><span class="cl">        proxy_redirect off;
+</span></span><span class="line"><span class="cl">        proxy_set_header Host $host:80;
+</span></span><span class="line"><span class="cl">        proxy_ssl_server_name on;
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Real-IP $remote_addr;
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span class="line"><span class="cl">        proxy_set_header X-Forwarded-Proto $scheme;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -359,7 +359,7 @@ server {
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">flyleon</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

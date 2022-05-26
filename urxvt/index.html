@@ -9,8 +9,8 @@
 <meta property="og:description" content="urxvt小巧快速，但缺乏缺省设置，设置起来比较麻烦，但设置好了，还是很好用的，而且只有它通过xwayland使用w3m支持ranger在w" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/urxvt/" /><meta property="og:image" content="https://flyleon.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-11-10T16:02:38&#43;08:00" />
-<meta property="article:modified_time" content="2020-11-10T16:02:38&#43;08:00" />
+<meta property="article:published_time" content="2020-11-10T16:02:38+08:00" />
+<meta property="article:modified_time" content="2020-11-10T16:02:38+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
@@ -143,13 +143,13 @@
 <h2 id="fcitx支持">fcitx支持</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">URxvt.preeditType:Root
-URxvt.inputMethod:fcitx
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">URxvt.preeditType:Root
+</span></span><span class="line"><span class="cl">URxvt.inputMethod:fcitx
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition tip open">
         <div class="details-summary admonition-title">
@@ -168,11 +168,11 @@ URxvt.inputMethod:fcitx
 <p>urxvt可采用守护模式，使用urxvtc启动终端，节省内存，更加快速。这里采用在sway内启动urxvtd守护进程。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">exec urvxtd -q -f
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">exec urvxtd -q -f
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition note open">
         <div class="details-summary admonition-title">
@@ -186,7 +186,7 @@ URxvt.inputMethod:fcitx
 <p>使用Dracula配色</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -206,41 +206,41 @@ URxvt.inputMethod:fcitx
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">! Dracula Xresources palette
-*.foreground: #F8F8F2
-*.background: #282A36
-*.color0:     #000000
-*.color8:     #4D4D4D
-*.color1:     #FF5555
-*.color9:     #FF6E67
-*.color10:    #5AF78E
-*.color3:     #F1FA8C
-*.color11:    #F4F99D
-*.color4:     #BD93F9
-*.color12:    #CAA9FA
-*.color5:     #FF79C6
-*.color13:    #FF92D0
-*.color6:     #8BE9FD
-*.color14:    #9AEDFE
-*.color7:     #BFBFBF
-*.color15:    #E6E6E6
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">! Dracula Xresources palette
+</span></span><span class="line"><span class="cl">*.foreground: #F8F8F2
+</span></span><span class="line"><span class="cl">*.background: #282A36
+</span></span><span class="line"><span class="cl">*.color0:     #000000
+</span></span><span class="line"><span class="cl">*.color8:     #4D4D4D
+</span></span><span class="line"><span class="cl">*.color1:     #FF5555
+</span></span><span class="line"><span class="cl">*.color9:     #FF6E67
+</span></span><span class="line"><span class="cl">*.color10:    #5AF78E
+</span></span><span class="line"><span class="cl">*.color3:     #F1FA8C
+</span></span><span class="line"><span class="cl">*.color11:    #F4F99D
+</span></span><span class="line"><span class="cl">*.color4:     #BD93F9
+</span></span><span class="line"><span class="cl">*.color12:    #CAA9FA
+</span></span><span class="line"><span class="cl">*.color5:     #FF79C6
+</span></span><span class="line"><span class="cl">*.color13:    #FF92D0
+</span></span><span class="line"><span class="cl">*.color6:     #8BE9FD
+</span></span><span class="line"><span class="cl">*.color14:    #9AEDFE
+</span></span><span class="line"><span class="cl">*.color7:     #BFBFBF
+</span></span><span class="line"><span class="cl">*.color15:    #E6E6E6
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="背景透明">背景透明</h2>
 <p>括号数字内为透明度。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">URxvt.background:[80]#282A36
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">URxvt.background:[80]#282A36
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="复制粘贴">复制粘贴</h2>
 <p>使用linux缺省复制粘贴方式。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -250,27 +250,27 @@ URxvt.inputMethod:fcitx
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">!! copy &amp; paste
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
-URxvt.keysym.Control-Meta-c: builtin-string:
-URxvt.keysym.Control-Meta-v: builtin-string:
-URxvt.iso14755: false
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">!! copy &amp; paste
+</span></span><span class="line"><span class="cl">URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+</span></span><span class="line"><span class="cl">URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+</span></span><span class="line"><span class="cl">URxvt.keysym.Control-Meta-c: builtin-string:
+</span></span><span class="line"><span class="cl">URxvt.keysym.Control-Meta-v: builtin-string:
+</span></span><span class="line"><span class="cl">URxvt.iso14755: false
+</span></span><span class="line"><span class="cl">URxvt.iso14755: false
+</span></span><span class="line"><span class="cl">URxvt.iso14755_52: false
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="字体设置">字体设置</h2>
 <p>我使用的是Hack。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">URxvt.font:xft:Hack:style=Regular:antialias=True:pixelsize=23
-URxvt.boldFont:xft:Hack:style=Bold:antialias=True:pixelsize=23
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">URxvt.font:xft:Hack:style=Regular:antialias=True:pixelsize=23
+</span></span><span class="line"><span class="cl">URxvt.boldFont:xft:Hack:style=Bold:antialias=True:pixelsize=23
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition tip open">
         <div class="details-summary admonition-title">
@@ -282,24 +282,24 @@ URxvt.boldFont:xft:Hack:style=Bold:antialias=True:pixelsize=23
 如archlnux中Hack字体，安装使用</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">yay -S ttf-hack
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">yay -S ttf-hack
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>查看字体使用<code>fc-list | grep hack </code>并无结果。要使用Hack查询，<code>fc-list | grep Hack</code>，结果显示;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">/usr/share/fonts/TTF/Hack-Italic.ttf: Hack:style=Italic
-/usr/share/fonts/TTF/Hack-Bold.ttf: Hack:style=Bold
-/usr/share/fonts/TTF/Hack-Regular.ttf: Hack:style=Regular
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/usr/share/fonts/TTF/Hack-Italic.ttf: Hack:style=Italic
+</span></span><span class="line"><span class="cl">/usr/share/fonts/TTF/Hack-Bold.ttf: Hack:style=Bold
+</span></span><span class="line"><span class="cl">/usr/share/fonts/TTF/Hack-Regular.ttf: Hack:style=Regular
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>系统内字体名为style前名称，即Hack。</p>
 </div>
@@ -337,7 +337,7 @@ URxvt.boldFont:xft:Hack:style=Bold:antialias=True:pixelsize=23
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">flyleon</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

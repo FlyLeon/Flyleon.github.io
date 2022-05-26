@@ -9,8 +9,8 @@
 <meta property="og:description" content="最近试试在archlinux下使用titling窗口管理器，包括大名鼎鼎的i3、bspwm、dwm、qtile和xmonad，发现打开了新世" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/wm/" /><meta property="og:image" content="https://flyleon.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-02-06T21:29:02&#43;08:00" />
-<meta property="article:modified_time" content="2021-02-06T21:29:02&#43;08:00" />
+<meta property="article:published_time" content="2021-02-06T21:29:02+08:00" />
+<meta property="article:modified_time" content="2021-02-06T21:29:02+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
@@ -144,7 +144,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -154,34 +154,34 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Screens
-hdmi=`xrandr | grep &#39; connected&#39; | grep &#39;HDMI1&#39; | awk &#39;{print $1}&#39;`
-
-if [ &#34;$hdmi&#34; = &#34;HDMI1&#34; ]; then
-xrandr --output eDP1 --primary --mode 1920x1080 --pos 1920x0 --rotate  normal --output DP1 --off --output DP2 --off --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal --left-of eDP1 --output HDMI2 --off --output VIRTUAL1 --off
-else
-xrandr --output eDP1 --primary --mode 1920x1080  --pos 0x0 --rotate normal --output HDMI1 --off --output DP1 --off &amp;
-fi
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Screens
+</span></span><span class="line"><span class="cl">hdmi=`xrandr | grep &#39; connected&#39; | grep &#39;HDMI1&#39; | awk &#39;{print $1}&#39;`
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">if [ &#34;$hdmi&#34; = &#34;HDMI1&#34; ]; then
+</span></span><span class="line"><span class="cl">xrandr --output eDP1 --primary --mode 1920x1080 --pos 1920x0 --rotate  normal --output DP1 --off --output DP2 --off --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate normal --left-of eDP1 --output HDMI2 --off --output VIRTUAL1 --off
+</span></span><span class="line"><span class="cl">else
+</span></span><span class="line"><span class="cl">xrandr --output eDP1 --primary --mode 1920x1080  --pos 0x0 --rotate normal --output HDMI1 --off --output DP1 --off &amp;
+</span></span><span class="line"><span class="cl">fi
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>设置运行fcitx</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=\@im=fcitx
-
-fcitx &amp;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export GTK_IM_MODULE=fcitx
+</span></span><span class="line"><span class="cl">export QT_IM_MODULE=fcitx
+</span></span><span class="line"><span class="cl">export XMODIFIERS=\@im=fcitx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">fcitx &amp;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>设置壁纸
@@ -193,15 +193,15 @@ fcitx &amp;
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">nm-applet &amp;
-blueman-applet &amp;
-udiskie -t &amp;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nm-applet &amp;
+</span></span><span class="line"><span class="cl">blueman-applet &amp;
+</span></span><span class="line"><span class="cl">udiskie -t &amp;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>护眼
@@ -243,7 +243,7 @@ udiskie -t &amp;
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">flyleon</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

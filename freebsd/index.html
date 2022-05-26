@@ -9,8 +9,8 @@
 <meta property="og:description" content="最近把一台T400的操作系统从Archlinux换成freeBSD，发现freeBSD更稳定，资源占用也更低。可能是使用人少的缘故，网上中文" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/freebsd/" /><meta property="og:image" content="https://flyleon.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-02-24T11:47:40&#43;08:00" />
-<meta property="article:modified_time" content="2021-02-24T11:47:40&#43;08:00" />
+<meta property="article:published_time" content="2021-02-24T11:47:40+08:00" />
+<meta property="article:modified_time" content="2021-02-24T11:47:40+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
@@ -192,50 +192,50 @@
 <p>禁用系统级 pkg 源。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">mkdir -p /usr/local/etc/pkg/repos
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir -p /usr/local/etc/pkg/repos
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>替换其中url为<code>pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest</code></p>
 <p>-禁用系统级 pkg 源</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">mv /etc/pkg/FreeBSD.conf /etc/pkg/FreeBSD.conf.back
-pkg update -f
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mv /etc/pkg/FreeBSD.conf /etc/pkg/FreeBSD.conf.back
+</span></span><span class="line"><span class="cl">pkg update -f
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="更换update源">更换update源</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sed -i &#39;&#39; &#39;s/ServerName update.FreeBSD.org/ServerName update.freebsd.cn/g&#39; /etc/freebsd-update.conf
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sed -i &#39;&#39; &#39;s/ServerName update.FreeBSD.org/ServerName update.freebsd.cn/g&#39; /etc/freebsd-update.conf
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>FreeBSD 安全补丁可以通过以下命令下载并安装补丁。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">freebsd-update fetch
-freebsd-update install #安装更新
-pkg audit -F  #查找所有软件包是否有漏洞补丁（安全审计）
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">freebsd-update fetch
+</span></span><span class="line"><span class="cl">freebsd-update install #安装更新
+</span></span><span class="line"><span class="cl">pkg audit -F  #查找所有软件包是否有漏洞补丁（安全审计）
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="freebsd国内源">freeBSD国内源</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -244,14 +244,14 @@ pkg audit -F  #查找所有软件包是否有漏洞补丁（安全审计）
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ports mirror at ports.freebsd.cn
-
-portsnap mirror at portsnap.freebsd.cn
-
-update mirror at update.freebsd.cn
-
-pkg mirror at pkg.freebsd.cn
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ports mirror at ports.freebsd.cn
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">portsnap mirror at portsnap.freebsd.cn
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">update mirror at update.freebsd.cn
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">pkg mirror at pkg.freebsd.cn
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="桌面配置">桌面配置</h2>
 <p>参照<a href="https://www.c0ffee.net/blog/freebsd-on-a-laptop/" target="_blank" rel="noopener noreffer">FreeBSD on a Laptop</a></p>
@@ -262,15 +262,15 @@ pkg mirror at pkg.freebsd.cn
 <h3 id="字体">字体</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg install wqy-fonts nerd-font
-xset fp+ /usr/local/share/font/wqy
-xset rehash
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg install wqy-fonts nerd-font
+</span></span><span class="line"><span class="cl">xset fp+ /usr/local/share/font/wqy
+</span></span><span class="line"><span class="cl">xset rehash
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="其他设置">其他设置</h3>
 <p>在<code>.xinitrc</code>中使用<code>picom</code>设置背景透明，要把用户加入<code>video</code>组，<code>pw addgroup video -m 用户</code>，<code>feh</code>设置壁纸，<code>slim</code>登录。</p>
@@ -282,79 +282,79 @@ xset rehash
 <p>编辑<code>/etc/sysctl.conf</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">dev.pcm.0.play.vchanformat=s16le:5.1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dev.pcm.0.play.vchanformat=s16le:5.1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="设置音量调节按键">设置音量调节按键</h3>
 <p>修改dwm的<code>config.h</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">{0, XF86XK_AudioLowerVolume, spawn, SHCMD(&#34;mixer vol -5&#34;)},
-{0, XF86XK_AudioRaiseVolume, spawn, SHCMD(&#34;mixer vol +5 &#34;)},
-{0, XF86XK_AudioMute, spawn, SHCMD(&#34;mixer -s 0&#34;)},
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{0, XF86XK_AudioLowerVolume, spawn, SHCMD(&#34;mixer vol -5&#34;)},
+</span></span><span class="line"><span class="cl">{0, XF86XK_AudioRaiseVolume, spawn, SHCMD(&#34;mixer vol +5 &#34;)},
+</span></span><span class="line"><span class="cl">{0, XF86XK_AudioMute, spawn, SHCMD(&#34;mixer -s 0&#34;)},
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="输出自动切换">输出自动切换</h3>
 <p>编辑`/etc/sysctl.conf</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">hw.snd.degault_auto=2
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hw.snd.degault_auto=2
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="升级">升级</h2>
 <p>使用freebsd-update升级FreeBSD操作系统使用freebsd-update升级FreeBSD操作系统。</p>
 <h3 id="更新到最新补丁版本">更新到最新补丁版本</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">freebsd-update fetch
-freebsd-update install
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">freebsd-update fetch
+</span></span><span class="line"><span class="cl">freebsd-update install
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="升级版本">升级版本</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">freebsd-update upgrade -r 13.0-BETA3
-freebsd-update install
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">freebsd-update upgrade -r 13.0-BETA3
+</span></span><span class="line"><span class="cl">freebsd-update install
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="重新引导到新内核并继续安装">重新引导到新内核并继续安装.</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">reboot
-freebsd-update install
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">reboot
+</span></span><span class="line"><span class="cl">freebsd-update install
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="重新构建pkg程序完成升级">重新构建pkg程序，完成升级</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">pkg-static upgrade -f
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pkg-static upgrade -f
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="chromium开启硬件加速">chromium开启硬件加速</h2>
 <h3 id="开启flags">开启flags</h3>
@@ -398,7 +398,7 @@ freebsd-update install
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">flyleon</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

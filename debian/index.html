@@ -9,8 +9,8 @@
 <meta property="og:description" content="笔记本一直使用archlinux，但有很长时间未更新，更新后挂了，于是想试试号称最稳定的debian。但网上如何桌面使用的文章很少。以下是我" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://flyleon.github.io/debian/" /><meta property="og:image" content="https://flyleon.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-03-16T08:42:16&#43;08:00" />
-<meta property="article:modified_time" content="2021-03-16T08:42:16&#43;08:00" />
+<meta property="article:published_time" content="2021-03-16T08:42:16+08:00" />
+<meta property="article:modified_time" content="2021-03-16T08:42:16+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://flyleon.github.io/logo.png"/>
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/flyleon.github.io\/debian\/"
-        },"genre": "posts","keywords": "debian","wordcount":  898 ,
+        },"genre": "posts","keywords": "debian","wordcount":  896 ,
         "url": "https:\/\/flyleon.github.io\/debian\/","datePublished": "2021-03-16T08:42:16+08:00","dateModified": "2021-03-16T08:42:16+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Debian桌面使用安装配置</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>flyleon</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux/"><i class="far fa-folder fa-fw"></i>linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-16">2021-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 898 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-16">2021-03-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 896 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -161,13 +161,13 @@
 <p><code>Intel Wireless</code>需要先安装<code>non-free</code>驱动。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo apt-get update 
-sudo apt-get install firmware-iwlwifi
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update 
+</span></span><span class="line"><span class="cl">sudo apt-get install firmware-iwlwifi
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>debian 默认使用ifup设置。</p>
 <ul>
@@ -175,15 +175,15 @@ sudo apt-get install firmware-iwlwifi
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">
-allow-hotplug wlan0
-iface wlan0 inet static
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">allow-hotplug wlan0
+</span></span><span class="line"><span class="cl">iface wlan0 inet static
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>编辑/etc/network/interface.d具体网络
@@ -191,23 +191,19 @@ iface wlan0 inet static
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">address xxx.xxx.xxx.xxx/24
-gateway xxx.xxx.xxx.xxx
-DNS     xxx.xxx.xxx.xxx
-wpa-ssid your_ssid
-wpa-psk your_password
-
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">address xxx.xxx.xxx.xxx/24
+</span></span><span class="line"><span class="cl">gateway xxx.xxx.xxx.xxx
+</span></span><span class="line"><span class="cl">DNS     xxx.xxx.xxx.xxx
+</span></span><span class="line"><span class="cl">wpa-ssid your_ssid
+</span></span><span class="line"><span class="cl">wpa-psk your_password
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>设置DNS
@@ -222,20 +218,20 @@ wpa-psk your_password
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">static const char *fonts[] = { &#34;Hack Nerd Font:size=12:weight=bold:
- antialias=true:autohint:true&#34;,&#34;WenQuanYi Micro Hei Mono:size=12&#34; };
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">static const char *fonts[] = { &#34;Hack Nerd Font:size=12:weight=bold:
+</span></span><span class="line"><span class="cl"> antialias=true:autohint:true&#34;,&#34;WenQuanYi Micro Hei Mono:size=12&#34; };
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>设置.xsessionrc</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -245,15 +241,15 @@ wpa-psk your_password
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">export GTK_IM_MODULE=&#34;fcitx&#34;
-export QT_IM_MODULE=&#34;fcitx&#34;
-export XMODIFIERS=&#34;@im=fcitx&#34;
-fcitx -r &amp;
-redshift &amp;
-feh --bg-fill ~/Downloads/sea-winter.jpg &amp;
-compton
-exec dwm
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">export GTK_IM_MODULE=&#34;fcitx&#34;
+</span></span><span class="line"><span class="cl">export QT_IM_MODULE=&#34;fcitx&#34;
+</span></span><span class="line"><span class="cl">export XMODIFIERS=&#34;@im=fcitx&#34;
+</span></span><span class="line"><span class="cl">fcitx -r &amp;
+</span></span><span class="line"><span class="cl">redshift &amp;
+</span></span><span class="line"><span class="cl">feh --bg-fill ~/Downloads/sea-winter.jpg &amp;
+</span></span><span class="line"><span class="cl">compton
+</span></span><span class="line"><span class="cl">exec dwm
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="安装fcitx">安装fcitx</h3>
 <p>安装<code>fitcx fcitx-frontend-all</code>。
@@ -267,13 +263,13 @@ exec dwm
 安装<code>libdrm-dev libva-dev</code>，进入解压目录。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">./configure
-sudo make clean install
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./configure
+</span></span><span class="line"><span class="cl">sudo make clean install
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="设置chromium">设置chromium</h4>
 <ul>
@@ -283,13 +279,13 @@ sudo make clean install
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">GPU rasterization=enabled
-Zero-copy rasterizer=enabled
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GPU rasterization=enabled
+</span></span><span class="line"><span class="cl">Zero-copy rasterizer=enabled
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>查看chrome://gpu</li>
@@ -338,7 +334,7 @@ Zero-copy rasterizer=enabled
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.83.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.99.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">flyleon</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
